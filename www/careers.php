@@ -66,7 +66,7 @@
     
     <div id="careersPage" data-role="page" class="page innerPage">
       <div class="topGrahic"></div>
-      <a href="./" class="menuButton">
+      <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
       
@@ -200,8 +200,8 @@
 
   
   <!-- scripts concatenated and minified via build script -->
-  <script defer="" src="js/plugins.js"></script>
-  <script defer="" src="js/script.js"></script>
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
   <!-- end scripts -->
 
 

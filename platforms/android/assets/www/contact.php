@@ -66,7 +66,7 @@
     
     <div id="servicesDetailPage" data-role="page" class="page innerPage">
       <div class="topGrahic"></div>
-      <a href="./" class="menuButton">
+      <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
       
@@ -133,16 +133,16 @@
           <form action="send-email.php" method="POST" data-enhance="false" />
             <ul>
               <li>
-                  <input class="textbox" type="text" placeholder="Name" required="" name="contactName" id="contactName" />
+                  <input class="textbox" type="text" placeholder="Name" required name="contactName" id="contactName" />
               </li>
               <li>
-                  <input class="textbox" type="email" placeholder="Email" required="" name="contactEmail" id="contactEmail" />
+                  <input class="textbox" type="email" placeholder="Email" required name="contactEmail" id="contactEmail" />
               </li>
               <li>
                   <input class="textbox" type="tel" placeholder="Phone" name="contactPhone" id="contactPhone" />
               </li>
               <li>
-                  <textarea class="textarea" placeholder="Message" required="" name="contactMessage" id="contactMessage"></textarea>
+                  <textarea class="textarea" placeholder="Message" required name="contactMessage" id="contactMessage"></textarea>
               </li>
             </ul>
             
@@ -221,8 +221,8 @@
 
   
   <!-- scripts concatenated and minified via build script -->
-  <script defer="" src="js/plugins.js"></script>
-  <script defer="" src="js/script.js"></script>
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
   <!-- end scripts -->
 
 
