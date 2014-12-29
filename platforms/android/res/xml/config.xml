@@ -10,7 +10,11 @@
     <feature name="Vibration">
         <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
     </feature>
-    <name>appNature</name>
+    <icon density="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
+    <icon density="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
+    <icon density="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <name>Plants Diary</name>
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>
@@ -52,11 +56,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-    <icon src="icon.png" />
-    <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
-    <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
-    <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <icon src="www/res/icon/android/icon.png" />
     <icon gap:platform="blackberry" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="ios" height="57" src="www/res/icon/ios/icon-57.png" width="57" />
