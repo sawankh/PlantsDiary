@@ -87,7 +87,7 @@
       <div class="padpage">
       		<h4>Grados</h4>
             <input class="textbox" type="text" placeholder="0" required name="deegres" id="deegres" />
-            <img  id="imgCompass" src="images/Compass.png" width="350" height="350">
+            <img  id="imgCompass" src="images/compass.png" width="350" height="350">
 				<button class="button"  onclick="startWatch();">Comenzar</button>
 				<button class="button" onclick="stopWatch();">Parar</button>
        </div>
