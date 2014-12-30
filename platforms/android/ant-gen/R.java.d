@@ -27,5 +27,4 @@ C:\xampp\htdocs\PlantsDiary\platforms\android\ant-build\res\drawable-port-ldpi\s
 C:\xampp\htdocs\PlantsDiary\platforms\android\ant-build\res\drawable-port-mdpi\screen.png \
 C:\xampp\htdocs\PlantsDiary\platforms\android\ant-build\res\drawable-port-xhdpi\screen.png \
 C:\xampp\htdocs\PlantsDiary\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
-C:\xampp\htdocs\PlantsDiary\platforms\android\ant-build\res\drawable-xxhdpi\icon.png \
 C:\xampp\htdocs\PlantsDiary\platforms\android\ant-build\AndroidManifest.xml \
