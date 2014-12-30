@@ -1,21 +1,12 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en"> 
 <head>
   <meta charset="utf-8" />
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  -->
-
-  <title> Retro Metro | SMV Creations</title>
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+ 
+  <title> Plants Diary</title>
+  <meta name="description" content="Plants diary based on phonegap framework" />  
+  <meta name="author" content="Adrian Gonzalez Martin, Sawan J. Kapai Harpalani, Sara Martin Molina" />  
 
   <!-- Mobile viewport optimization h5bp.com/ad -->
   <meta name="HandheldFriendly" content="True" />
@@ -32,7 +23,7 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/blue.php" />
+  <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
   <!-- end LESS -->
   <!-- fonts -->
@@ -70,9 +61,9 @@
         <img src="img/menu-button.png" alt="Menu" />
       </a>
       <div class="padpage padtop">
-        <h1><a href="#">About Us</a></h1>
+        <h1><a href="#">Qui&eacute;nes Somos</a></h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type. Lorem Ipsum is simply dummy text Lorem text.
+          El equipo de Plants Diary ha creado esta aplicaci&oacute;n con el fin de ayudar a todas esas personas que van de excursiones o se dedican al estudio de reino de las plantas y no quieren llevar encima una libreta o agenda. Tan solo necesita el m&oacute;vil y podr&aacute; almacenar toda la informaci&oacute;n relativa a las muestras tomadas.
         </p>
       </div>
     
@@ -86,11 +77,11 @@
                 <a class="gallery-item" href="img/sample-images/about-4.jpg"> <img src="img/sample-images/about-4.jpg" alt="Image1" /></a>
               </li>
               <li>
-                <a class="gallery-item" href="img/sample-images/about-1.jpg"> <img src="img/sample-images/about-1.jpg" alt="Image1" /></a>
+                <a class="gallery-item" href="img/sample-images/about_3.jpg"> <img src="img/sample-images/about_3.jpg" alt="Image1" /></a>
               </li>
               
               <li>
-                <a class="gallery-item" href="img/sample-images/about-2.jpg"> <img src="img/sample-images/about-2.jpg" alt="Image1" /></a>
+                <a class="gallery-item" href="img/sample-images/about_4.jpg"> <img src="img/sample-images/about_4.jpg" alt="Image1" /></a>
               </li>
             </ul>
           </div>
@@ -98,75 +89,43 @@
 
 
       <div class="padpage">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
-        </p>
-        
-        
         <!-- h2 has to be written like this, for the black area -->
         <h2>
         </h2>
         <span class="h2">
-          Who we are
+          Que hacemos
         </span>
         
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+          Los desarrolladores de esta aplicaci&oacute;n son estudiantes de Grado en Ingener&iacute;a Inform&aacute;tica en la Universidad de La Laguna, este proyecto en concreto se ha desarrollado para la asignatura Interfaces Inteligentes.
         </p>
         
-        
-        <!-- h2 has to be written like this, for the black area -->
-        <h2>
-        </h2>
-        <span class="h2">
-          What we do
-        </span>
-      </div>
-      
       <div class="flexslider">
-        <img src="img/sample-images/image2.jpg" alt="Image2" />
+        <img src="img/sample-images/coding.jpg" alt="Code" />
       </div>
-
-      <div class="padpage">        
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
-        </p>
-        
         
         <!-- h2 has to be written like this, for the black area -->
         <h2>
         </h2>
         <span class="h2">
-          Why Us
+          Otros proyectos
         </span>
       </div>
-      
-        <div class="flexslider">
-          <img src="img/sample-images/image3.jpg" alt="Image3" />
+      <div class="padpage">
+      	<div class="description">
+        <p>
+        	Estos desarrolladores han realizado diversos proyectos, los cuales pueden explorarse en los siguientes repositorios github:
+        </p>    
+        	<ul>
+        	<li>Adri&aacute;n Gonz&aacute;lez Mart&iacute;n: <a href="https://github.com/alu4073" target="_blank"> Repositorio</a></li> <br>
+            <li>Sawan J. Kapai Harpalani: <a href="https://github.com/alu0100694765" target="_blank"> Repositorio</a></li> <br>
+        <li>Sara Mart&iacute;n Molina: <a href="https://github.com/alu4102" target="_blank"> Repositorio</a></li><br>
+        	</ul>
+       	
         </div>
+        <img src="img/sample-images/github.png" height="600" width="800" alt="Image3" />
         
       <div class="padpage padbottom">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
-        </p>
-        
-        <br /><br />
-        <h2>
-        </h2>
-        <span class="h2">
-          Our Tweets
-        </span>
-        
-        <ul id="twitter_update_list">
-          <div style="text-align: center; width: 100%">
-            <img src="img/ajax-loader.gif" alt="loader" />
-          </div>
-        </ul>
-        <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-        <!-- link doesn't work anymore -->
-        <!--<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/rahul_vagadiya.json?callback=twitterCallback2&count=5"></script>-->
-        <script type="text/javascript" src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=rahul_vagadiya&callback=twitterCallback2&count=10"></script>
-        
         
         <div class="footer">
           <div class="social right">
@@ -176,7 +135,7 @@
           </div>
           
           <div class="copyright left">
-            Copyright &copy; by SMV Creations
+            Plants Diary
           </div>
           
           <div class="clearfix"></div>
