@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   -->
 
-  <title> Retro Metro | SMV Creations</title>
+  <title> Plants Time</title>
   <meta name="description" content="" />
   <meta name="author" content="" />
 
@@ -32,7 +32,7 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/blue.php" />
+  <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
   <!-- end LESS -->
   <!-- fonts -->
@@ -65,15 +65,13 @@
   <div role="main">
     
     <div id="portfolioPage" data-role="page" class="page innerPage">
-      <div class="topGrahic"></div>
       <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
       <div class="padpage padtop">
-        <h1><a href="#">Projects Portfolio</a></h1>
+        <h1><a href="#">Buscar una planta</a></h1>
         <p>
-          We have been in this industry since 12 years.<br />
-          And we have a huge portfolio with rich client base.
+          Busque una planta indicando su nombre com&uacute;n.
         </p>
       </div>
     
@@ -82,89 +80,19 @@
         <h2>
         </h2>
         <span class="h2">
-          Our Projects
+          Indique nombre
         </span>
+         <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
+         <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />
       </div>
     
     
     
-      <div class="projects">
-        <ul data-role="listview">
-            <li><a href="project-detail.php">
-                    <img src="img/gallery/10.jpg" alt="image 2" />
-                    <h3>Project Name goes here</h3>
-                    <p>Client Name</p>
-            </a></li>
-            <li><a href="project-detail.php">
-                    <img src="img/gallery/1.jpg" alt="image 1" />
-                    <h3>Large Hadron Collider</h3>
-                    <p>Geneva</p>
-            </a></li>
-            <li><a href="project-detail.php">
-                    <img src="img/gallery/12.jpg" alt="image 2" />
-                    <h3>Project Name goes here</h3>
-                    <p>Client Name</p>
-            </a></li>
-            <li><a href="project-detail.php">
-                    <img src="img/gallery/5.jpg" alt="image 1" />
-                    <h3>Large Hadron Collider</h3>
-                    <p>Geneva</p>
-            </a></li>
-            <li><a href="project-detail.php">
-                    <img src="img/gallery/15.jpg" alt="image 2" />
-                    <h3>Project Name goes here</h3>
-                    <p>Client Name</p>
-            </a></li>
-            <li><a href="project-detail.php">
-                    <img src="img/gallery/7.jpg" alt="image 1" />
-                    <h3>Large Hadron Collider</h3>
-                    <p>Geneva</p>
-            </a></li>
-        </ul>
-      </div>
-    
-      
-      <div class="padpage">
-        <!-- h2 has to be written like this, for the black area -->
-        <h2>
-        </h2>
-        <span class="h2">
-          Our Clients
-        </span>
-      </div>
       
       
-    
-    
-      <div class="clients">
-        <ul data-role="listview">
-            <li><a href="client-detail.php">
-                    <img class="ui-li-icon" src="img/sample-images/icon1.png" alt="image 2" />
-                    Adidas
-            </a></li>
-            <li><a href="client-detail.php">
-                    <img class="ui-li-icon" src="img/sample-images/icon2.png" alt="image 1" />
-                    Microsoft
-            </a></li>
-            <li><a href="client-detail.php">
-                    <img class="ui-li-icon" src="img/sample-images/icon3.png" alt="image 2" />
-                    Google
-            </a></li>
-            <li><a href="client-detail.php">
-                    <img class="ui-li-icon" src="img/gallery/7.jpg" alt="image 1" />
-                    Amazon
-            </a></li>
-            <li><a href="client-detail.php">
-                    <img class="ui-li-icon" src="img/sample-images/icon1.png" alt="image 2" />
-                    Itercept
-            </a></li>
-            
-        </ul>
-        
-      </div>
-    
       
-      
+      <br>
+      <br>
       <div class="padpage padbottom">
         
         
@@ -177,7 +105,7 @@
           </div>
           
           <div class="copyright left">
-            Copyright &copy; by SMV Creations
+      		Plants Time
           </div>
           
           <div class="clearfix"></div>

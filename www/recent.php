@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   -->
 
-  <title> Retro Metro | SMV Creations</title>
+  <title> Plants Time</title>
   <meta name="description" content="" />
   <meta name="author" content="" />
 
@@ -32,7 +32,7 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/blue.php" />
+  <link rel="stylesheet/less" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
   <!-- end LESS -->
   <!-- fonts -->
@@ -71,112 +71,22 @@
       </a>
       
       <div class="padpage padtop">
-        <h1><a href="#">Videos</a></h1>
+        <h1><a href="#">Reciente.</a></h1>
+      	 <p>
+          	Aqu&iacute; puede ver las entradas recientes a su diario.
+        </p>
+      </div>
       
-        <h4>
-          Multimedia Reel
-        </h4>
+      <br /><br />
+      <div class="padpage">
+        <h2> </h2>
+        <span class="h2">
+          Entradas recientes.
+        </span>
+      </div>
+  
+          
         
-        <p>
-          We have a reel running. 24x7.
-        </p>
-        <p>
-          Keep watching this space for more videos!
-        </p>
-      </div>
-      
-      <br /><br />
-      <div class="padpage">
-        <h2> </h2>
-        <span class="h2">
-          Videos can be in a Slider
-        </span>
-      </div>
-  
-          
-        <!--<div class="padpage">-->
-          <div class="videosSlide flexslider" data-ajax="false">
-            <ul id="slides" class="slides">
-              <li>
-                <iframe src="http://player.vimeo.com/video/49155684?byline=0&amp;portrait=0&amp;color=ff9933" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/33091687?byline=0&amp;portrait=0&amp;color=c9ff23" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-            </ul>
-          </div>
-        <!--</div>-->
-
-
-
-          
-
-      <br /><br />
-      <div class="padpage">
-        <h2> </h2>
-        <span class="h2">
-          Videos can be in a grid
-        </span>
-      </div>
-  
-  
-        <!--<div class="padpage">-->
-          <div class="videosGrid">
-            <ul>
-              <li>
-                <iframe src="http://player.vimeo.com/video/49155684?byline=0&amp;portrait=0&amp;color=ff9933" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/33091687?byline=0&amp;portrait=0&amp;color=c9ff23" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/49155684?byline=0&amp;portrait=0&amp;color=ff9933" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/33091687?byline=0&amp;portrait=0&amp;color=c9ff23" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/49155684?byline=0&amp;portrait=0&amp;color=ff9933" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/33091687?byline=0&amp;portrait=0&amp;color=c9ff23" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
-        <!--</div>-->
-
-  
-  
-          
-
-      <br /><br />
-      <div class="padpage">
-        <h2> </h2>
-        <span class="h2">
-          Of course! Videos in a list, too!
-        </span>
-      </div>
-  
-  
-        <!--<div class="padpage">-->
-          <div class="videosList">
-            <ul>
-              <li>
-                <iframe src="http://player.vimeo.com/video/49155684?byline=0&amp;portrait=0&amp;color=ff9933" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/33091687?byline=0&amp;portrait=0&amp;color=c9ff23" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-              <li>
-                <iframe src="http://player.vimeo.com/video/49155684?byline=0&amp;portrait=0&amp;color=ff9933" height="190" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              </li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
-        <!--</div>-->
-
-  
       <div class="padpage padbottom">
         <div class="footer">
           <div class="social right">
@@ -186,7 +96,7 @@
           </div>
           
           <div class="copyright left">
-            Copyright &copy; by SMV Creations
+           Plants Time
           </div>
           
           <div class="clearfix"></div>

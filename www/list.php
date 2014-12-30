@@ -1,12 +1,21 @@
 <!doctype html>
-<html class="no-js" lang="en"> 
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
 
- 
-  <title> Plants Diary</title>
-  <meta name="description" content="Plants diary based on phonegap framework" />  
-  <meta name="author" content="Adrian Gonzalez Martin, Sawan J. Kapai Harpalani, Sara Martin Molina" />  
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  -->
+
+  <title> Plants Time</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
   <!-- Mobile viewport optimization h5bp.com/ad -->
   <meta name="HandheldFriendly" content="True" />
@@ -55,78 +64,28 @@
   </header>
   <div role="main">
     
-    <div id="aboutPage" data-role="page" class="page innerPage">
+    <div id="careersPage" data-role="page" class="page innerPage">
       <div class="topGrahic"></div>
       <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
+      
       <div class="padpage padtop">
-        <h1><a href="#">Qui&eacute;nes Somos</a></h1>
+        <h1><a href="#">Listar</a></h1>
+      
         <p>
-          El equipo de Plants Diary ha creado esta aplicaci&oacute;n con el fin de ayudar a todas esas personas que van de excursiones o se dedican al estudio de reino de las plantas y no quieren llevar encima una libreta o agenda. Tan solo necesita el m&oacute;vil y podr&aacute; almacenar toda la informaci&oacute;n relativa a las muestras tomadas.
+          Listado de todas las muestras disponibles.
         </p>
       </div>
-    
-        <!--<div class="padpage">-->
-          <div class="flexslider" data-ajax="false">
-            <ul id="slides" class="slides">
-              <li>
-                <a class="gallery-item" href="img/sample-images/about-3.jpg"> <img src="img/sample-images/about-3.jpg" alt="Image1" /></a>
-              </li>
-              <li>
-                <a class="gallery-item" href="img/sample-images/about-4.jpg"> <img src="img/sample-images/about-4.jpg" alt="Image1" /></a>
-              </li>
-              <li>
-                <a class="gallery-item" href="img/sample-images/about_3.jpg"> <img src="img/sample-images/about_3.jpg" alt="Image1" /></a>
-              </li>
-              
-              <li>
-                <a class="gallery-item" href="img/sample-images/about_4.jpg"> <img src="img/sample-images/about_4.jpg" alt="Image1" /></a>
-              </li>
-            </ul>
-          </div>
-        <!--</div>-->
-
-
       <div class="padpage">
-        <!-- h2 has to be written like this, for the black area -->
-        <h2>
-        </h2>
-        <span class="h2">
-          Que hacemos
-        </span>
-        
-        <p>
-          Los desarrolladores de esta aplicaci&oacute;n son estudiantes de Grado en Ingener&iacute;a Inform&aacute;tica en la Universidad de La Laguna, este proyecto en concreto se ha desarrollado para la asignatura Interfaces Inteligentes.
-        </p>
-        
-      <div class="flexslider">
-        <img src="img/sample-images/coding.jpg" alt="Code" />
+      	<input type="submit" class="button buttonStrong right" value="Listar" name="buttonSubmit" value="submit" />
       </div>
         
-        <!-- h2 has to be written like this, for the black area -->
-        <h2>
-        </h2>
-        <span class="h2">
-          Otros proyectos
-        </span>
-      </div>
-      <div class="padpage">
-      	<div class="description">
-        <p>
-        	Estos desarrolladores han realizado diversos proyectos, los cuales pueden explorarse en los siguientes repositorios github:
-        </p>    
-        	<ul>
-        	<li>Adri&aacute;n Gonz&aacute;lez Mart&iacute;n: <a href="https://github.com/alu4073" target="_blank"> Repositorio</a></li> <br>
-            <li>Sawan J. Kapai Harpalani: <a href="https://github.com/alu0100694765" target="_blank"> Repositorio</a></li> <br>
-        <li>Sara Mart&iacute;n Molina: <a href="https://github.com/alu4102" target="_blank"> Repositorio</a></li><br>
-        	</ul>
-       	
-        </div>
-        <img src="img/sample-images/github.png" height="600" width="800" alt="Image3" />
-        
+      
       <div class="padpage padbottom">
         
+       <br>
+       <br>
         <div class="footer">
           <div class="social right">
             <a href="http://plus.google.com" target="_blank"> <img src="img/icon-gplus.png" alt="Like us on Google+" /></a>
@@ -135,7 +94,7 @@
           </div>
           
           <div class="copyright left">
-            Plants Diary
+            Plants Time
           </div>
           
           <div class="clearfix"></div>
@@ -143,9 +102,11 @@
         <!--end footer-->
         
       </div>
-      <!--end padpage-->
-    </div>
-    <!--end menuPage-->
+      <!--end padbottom-->
+      
+      
+      </div>
+    <!--end careers page-->
     
   </div>
   

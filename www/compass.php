@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   -->
 
-  <title> Retro Metro | SMV Creations</title>
+  <title> Plants Diary</title>
   <meta name="description" content="" />
   <meta name="author" content="" />
 
@@ -32,8 +32,10 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/blue.php" />
+  <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
   <!-- end LESS -->
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css' />
@@ -64,82 +66,39 @@
   </header>
   <div role="main">
     
-    <div id="careersPage" data-role="page" class="page innerPage">
+    <div id="typographyPage" data-role="page" class="page innerPage">
+      
       <div class="topGrahic"></div>
       <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
       
+      <br>
+      <br>
       <div class="padpage padtop">
-        <h1><a href="#">Careers</a></h1>
-      
-        <h4>
-          Come join the flock
-        </h4>
+      	<h1>Br&uacute;jula</h1>
         <p>
-          At SMV Creations, we're connecting people everywhere to what they find most meaningful.
-        </p>
-        
-        <p>
-          Come. Be a part. Of something BIG!
+        	Le ofrecemos una fant&aacute;stica br&uacute;jula para que nunca pierda el rumbo.
         </p>
       </div>
+        
+      <br>
+      <br>
+      <div class="padpage">
+      		<h4>Grados</h4>
+            <input class="textbox" type="text" placeholder="0" required name="deegres" id="deegres" />
+            <img  id="imgCompass" src="images/Compass.png" width="350" height="350">
+				<button class="button"  onclick="startWatch();">Comenzar</button>
+				<button class="button" onclick="stopWatch();">Parar</button>
+       </div>
       
-          
-        <!--<div class="padpage">-->
-          <div class="flexslider" data-ajax="false">
-                <img src="img/sample-images/join-1.jpg" alt="Image1" />
-          </div>
-        <!--</div>-->
-
       
+        
+      <br />
+      <br>
       <div class="padpage padbottom">
         
-        <h2> </h2>
-        <span class="h2">
-          Open Positions
-        </span>
         
-        <ul class="positions">
-          <li>
-            <div class="title"> Software Engineer </div>
-            <div class="description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type. Lorem Ipsum is simply dummy text Lorem text.
-            </div>
-            <a href="mailto:apply@company.com?subject=Software Engineer&body=I am interested to apply for this position." class="left apply"> Apply now </a>
-            <a href="mailto:friend@email.com?subject=Software Engineer&body=This could interest you." class="recommend right"> Recommend </a>
-            <div class="clearfix"></div>
-          </li>
-          
-          <li>
-            <div class="title"> Regional Marketing Manager</div>
-            <div class="description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type. Lorem Ipsum is simply dummy text Lorem text.
-              <br />
-              <br />
-              Your responsibilites:
-              <ul>
-                <li> Lorem Ipsum is simply dummy text</li>
-                <li> Printing and typesetting industry</li>
-                <li> Industry's standard dummy text ever since</li>                
-              </ul>
-            </div>
-            <a href="mailto:apply@company.com?subject=Software Engineer&body=I am interested to apply for this position." class="left apply"> Apply now </a>
-            <a href="mailto:friend@email.com?subject=Software Engineer&body=This could interest you." class="recommend right"> Recommend </a>
-            <div class="clearfix"></div>
-          </li>
-          
-          <li>
-            <div class="title"> Graphic Designer</div>
-            <div class="description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type. Lorem Ipsum is simply dummy text Lorem text.
-            </div>
-            <a href="mailto:apply@company.com?subject=Software Engineer&body=I am interested to apply for this position." class="left apply"> Apply now </a>
-            <a href="mailto:friend@email.com?subject=Software Engineer&body=This could interest you." class="recommend right"> Recommend </a>
-            <div class="clearfix"></div>
-          </li>
-        </ul>
-  
         <div class="footer">
           <div class="social right">
             <a href="http://plus.google.com" target="_blank"> <img src="img/icon-gplus.png" alt="Like us on Google+" /></a>
@@ -148,7 +107,7 @@
           </div>
           
           <div class="copyright left">
-            Copyright &copy; by SMV Creations
+            Plants Diary
           </div>
           
           <div class="clearfix"></div>
@@ -156,11 +115,11 @@
         <!--end footer-->
         
       </div>
-      <!--end padbottom-->
+      <!--end padpage-->
       
       
-      </div>
-    <!--end careers page-->
+    </div>
+    <!--end typographyPage-->
     
   </div>
   

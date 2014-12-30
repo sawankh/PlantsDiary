@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   -->
 
-  <title> Retro Metro | SMV Creations</title>
+  <title> Plants Diary</title>
   <meta name="description" content="" />
   <meta name="author" content="" />
 
@@ -32,8 +32,10 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/blue.php" />
+  <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
   <!-- end LESS -->
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css' />
@@ -65,106 +67,50 @@
   <div role="main">
     
     <div id="servicesPage" data-role="page" class="page innerPage padpage padtop padbottom">
-      <div class="topGrahic"></div>
       <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
-      <h1><a href="#">Products &amp; Services</a></h1>
+      <h1><a href="#">A&ntilde;adir Planta</a></h1>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type. Lorem Ipsum is simply dummy text Lorem text.
+        Rellene los datos de la muestra recogida.
       </p>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
-      </p>
+      <br>
+      <br>
       
-      
-      <!-- h2 has to be written like this, for the black area -->
-      <h2>
-      </h2>
-      <span class="h2">
-        Our Products
-      </span>
-      
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
-      </p>
-      
-      <ul class="services">
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product1-image.png" alt="Product 1" /> </a> <a href="service-detail.php" class="text"> HTML 5 Sebwite</a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product2-image.png" alt="Product 2" /> </a> <a href="service-detail.php" class="text"> Pkyse </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product3-image.png" alt="Product 3" /> </a> <a href="service-detail.php" class="text"> TweetPeck API 10.0 </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product4-image.png" alt="Product 4" /> </a> <a href="service-detail.php" class="text"> LinkedOut </a>
-          <div class="clearfix"></div>
-        </li>
-      </ul>
-      
-      
-      
-      <!-- h2 has to be written like this, for the black area -->
-      <h2>
-      </h2>
-      <span class="h2">
-        Our Services
-      </span>
-      
-      <ul class="services">
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product1-image.png" alt="Product 1" /> </a> <a href="service-detail.php" class="text"> HTML 5 Sebwite</a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product2-image.png" alt="Product 2" /> </a> <a href="service-detail.php" class="text"> Pkyse </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product3-image.png" alt="Product 3" /> </a> <a href="service-detail.php" class="text"> TweetPeck API 10.0 </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product4-image.png" alt="Product 4" /> </a> <a href="service-detail.php" class="text"> LinkedOut </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product5-image.png" alt="Product 5" /> </a> <a href="service-detail.php" class="text"> HitGub </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product1-image.png" alt="Product 1" /> </a> <a href="service-detail.php" class="text"> HTML 5 Sebwite</a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product2-image.png" alt="Product 2" /> </a> <a href="service-detail.php" class="text"> Pkyse </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product3-image.png" alt="Product 3" /> </a> <a href="service-detail.php" class="text"> TweetPeck API 10.0 </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product4-image.png" alt="Product 4" /> </a> <a href="service-detail.php" class="text"> LinkedOut </a>
-          <div class="clearfix"></div>
-        </li>
-        <li>
-          <a class="image" href="service-detail.php"> <img src="img/sample-images/product5-image.png" alt="Product 5" /> </a> <a href="service-detail.php" class="text"> HitGub </a>
-          <div class="clearfix"></div>
-        </li>
-      </ul>
-      
-      
-      
-      
+      <h4> Datos </h4>
+          
+          <form action="send-email.php" method="POST" data-enhance="false" />
+            <ul>
+              <li>
+                  <input class="textbox" type="text" placeholder="Nombre cient&iacute;fico" required name="NameSci" id="NameSci" />
+              </li>
+              <li>
+                  <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
+              </li>
+              <li>
+                  <input class="textbox" type="text" placeholder="Location" name="Location" id="Location" />
+              </li>
+              <li>
+              	<button class="button" onclick="obtenerPosicion();">Obtener ubicación</button>	
+              </li>
+              <li>
+                  <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
+              </li>
+              <li>
+              <textarea class="textarea required" placeholder="Observations" required="" name="Observations" id="Observations"></textarea>
+              </li>
+              <li>
+              	<button class="button" onclick="capturarFoto();">Capturar Foto</button>
+				<br> <img style="display: none;" id="imageCamara" src="" />
+              </li>
+            </ul>
+            
+            <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />
+            <div class="clearfix"></div>                
+          </form>
         
-        
+       <br>
+       <br> 
       <div class="footer">
         <div class="social right">
           <a href="http://plus.google.com" target="_blank"> <img src="img/icon-gplus.png" alt="Like us on Google+" /></a>
@@ -173,7 +119,7 @@
         </div>
         
         <div class="copyright left">
-          Copyright &copy; by SMV Creations
+          Plants Time
         </div>
         
         <div class="clearfix"></div>

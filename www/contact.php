@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   -->
 
-  <title> Retro Metro | SMV Creations</title>
+  <title> Plants Time</title>
   <meta name="description" content="" />
   <meta name="author" content="" />
 
@@ -32,7 +32,7 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/blue.php" />
+  <link rel="stylesheet/less" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
   <!-- end LESS -->
   <!-- fonts -->
@@ -71,64 +71,14 @@
       </a>
       
       <div class="padpage padtop">
-        <h1>Contact Us</h1>
+        <h1>Contacto</h1>
       </div>
       
       <div class="padpage">
         
-        <div class="cutContainer">
-          <span class="cutTop"></span>
-          <span class="cutBottom"></span>
-          <img class="mapPin right" src="img/image-pin.png" alt="Map Pin" />
-          <div class="text left">
-            51st street, 5th Avenue<br />
-            New York City,<br />
-            The US<br />
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <!--end cut container-->
-
-
-        <div class="cutContainer">
-          <span class="cutTop"></span>
-          <span class="cutBottom"></span>
-          
-          <div class="text left">
-            <div class="block"> Phone<a class="link" href="tel:+97165555555"> +971 55 123 1231</a></div>
-            <div class="block"> Fax <a class="link" href="tel:+97165555555"> +971 55 121 4321</a></div>
-            <div class="block"> Email <a class="link" href="mailto:mail@example.com"> mail@example.com</a></div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <!--end cut container-->
-
-      
-        <div class="cutContainer noBorder noPadding noMargin">
-          <span class="cutTop"></span>
-          <span class="cutBottom"></span>
-          <div id="mapLocation" class="map" data-location="Sharjah, UAE">
-          </div>
-        </div>
-        <a href="#" data-ajax="false" class="toggleMapHeight" data-opened="-" data-closed="+">+</a>
-        <!--end cut container-->
-
-      
-      
-      
         
-        <div class="cutContainer moreUpperMargin">
-          <span class="cutTop"></span>
-          <span class="cutBottom"></span>
-          
-          <div class="ui-widget successMessage">
-           <div class="ui-state-highlight ui-corner-all">
-             <p><span class="ui-icon ui-icon-info" style=""></span>
-             <strong>Success!</strong> Your mail has been sent.</p>
-           </div>
-          </div>
-        
-          <h4> Write to us </h4>
+     
+          <h4> Escr&iacute;benos </h4>
           
           <form action="send-email.php" method="POST" data-enhance="false" />
             <ul>
@@ -149,14 +99,9 @@
             <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />
             <div class="clearfix"></div>                
           </form>
-          
-        </div>
-        <!--end cut container-->
-
-    
-      </div>
-      <!--end padpage-->
-      
+  
+      <br>
+      <br>
       <div class="padpage padbottom">
         
         
@@ -169,7 +114,7 @@
           </div>
           
           <div class="copyright left">
-            Copyright &copy; by SMV Creations
+            Plants Time
           </div>
           
           <div class="clearfix"></div>
