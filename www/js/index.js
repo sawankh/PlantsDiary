@@ -65,8 +65,13 @@ function onSuccess(position) {
     lat = position.coords.latitude;
     lng = position.coords.longitude;
     alert('Lattitude: ' + lat + ' Longitude: ' + lng);
-    sessionStorage.setItem('Latitude', lat);
-    sessionStorage.setItem('Longitude', lng);
+    
+	var longitude = document.getElementById("Longitude");
+	var latitude = document.getElementById("Latitude");
+	
+	longitude.value = lng;
+	latitude.value = lat;
+	
 }
 // onError Callback receives a PositionError object
 //
