@@ -48,8 +48,32 @@ var app = {
     }
 };
 
+/// Get location ///
 
+var lat = 0;
+var lng = 0;
+//A button click will call this function
+function getLocation() {
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, { enableHighAccuracy: true });
+}
 
+// onSuccess Geolocation
+//
+function onSuccess(position) {
+    //Lat long will be fetched and stored in session variables
+    //These variables will be used while storing data in local database 
+    lat = position.coords.latitude;
+    lng = position.coords.longitude;
+    alert('Lattitude: ' + lat + ' Longitude: ' + long);
+    sessionStorage.setItem('lattitude', lat);
+    sessionStorage.setItem('longitude', lng);
+}
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    alert('code: ' + error.code + '\n' +
+          'message: ' + error.message + '\n');
+}
 
 /// Parte sensor Compass ///
 
