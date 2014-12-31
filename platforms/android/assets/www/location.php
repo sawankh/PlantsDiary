@@ -74,7 +74,12 @@
       <h1><a href="#">Ubicaci&oacute;n actual</a></h1>
       
       <button class="button" onclick="obtenerPosicion();">Obtener ubicación</button>	
-      
+      <p id="geoPos"></p>
+	  <div id="map-page" data-url="map-page">
+		<div role="main" class="pad-page" id="map-canvas">
+		<!-- map loads here... -->
+		</div>
+	  </div>
       <br>
       <br>
       <div class="footer">
