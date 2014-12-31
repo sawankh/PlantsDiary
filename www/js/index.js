@@ -52,7 +52,8 @@ var app = {
 
 var lat = 0;
 var lng = 0;
-//A button click will call this function
+
+// A button click will call this function
 function getLocation() {
     navigator.geolocation.getCurrentPosition(onSuccess, onError, { enableHighAccuracy: true });
 }
@@ -64,7 +65,6 @@ function onSuccess(position) {
     //These variables will be used while storing data in local database 
     lat = position.coords.latitude;
     lng = position.coords.longitude;
-    alert('Lattitude: ' + lat + ' Longitude: ' + lng);
     
 	var longitude = document.getElementById("Longitude");
 	var latitude = document.getElementById("Latitude");
@@ -73,6 +73,7 @@ function onSuccess(position) {
 	latitude.value = lat;
 	
 }
+
 // onError Callback receives a PositionError object
 //
 function onError(error) {
