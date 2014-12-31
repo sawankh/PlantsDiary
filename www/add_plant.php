@@ -56,6 +56,31 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>
+  
+  <script>
+  	var dirIP = '192.168.1.109';
+  	
+  	$('#enviar').submit(function(evento) {
+					evento.preventDefault();
+					var datos_formulario = $(this).serialize();
+					$.ajax({
+						url : 'http://' + dirIP + '/PlantsDiary/www/register_plant.php',
+						data : datos_formulario,
+						type : 'POST',
+						success : function(datos) {
+							$("#lnkDialogEnv").click();
+							$('input[name="NameSci"]').val('');
+							$('input[name="NameCom"]').val('');
+							$('input[name="Longitude"]').val('');
+							$('input[name="Latitude"]').val('');
+							$('input[name="Date"]').val('');
+							$('input[name="Observations"]').val('');
+							$('input[name="Image"]').val('');
+						}	
+					});
+
+				});
+  </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
@@ -78,7 +103,7 @@
       
       <h4> Datos </h4>
           
-          <form action="register_plant.php" method="POST" data-enhance="false" />
+          <form action="register_plant.php" id="enviar" method="POST" data-enhance="false" />
             <ul>
               <li>
                   <input class="textbox" type="text" placeholder="Nombre cient&iacute;fico" required name="NameSci" id="NameSci" />
@@ -100,6 +125,9 @@
               </li>
               <li>
               <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>
+              </li>
+              <li>
+                  <input class="textbox" type="image" placeholder="Image" required name="Image" id="Image"/>
               </li>
               <li>
               	<button class="button" onclick="capturarFoto();">Capturar Foto</button>

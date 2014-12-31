@@ -34,8 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-
+ 
   <!-- end LESS -->
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css' />
@@ -79,7 +78,7 @@
       
       <h4> Datos </h4>
           
-          <form action="send-email.php" method="POST" data-enhance="false" />
+          <form action="register_plant.php" method="POST" data-enhance="false" />
             <ul>
               <li>
                   <input class="textbox" type="text" placeholder="Nombre cient&iacute;fico" required name="NameSci" id="NameSci" />
@@ -88,16 +87,19 @@
                   <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
               </li>
               <li>
-                  <input class="textbox" type="text" placeholder="Location" name="Location" id="Location" />
+                  <input class="textbox" type="text" placeholder="Longitude" name="Longitude" id="Longitude" />
               </li>
               <li>
-              	<button class="button" onclick="obtenerPosicion();">Obtener ubicación</button>	
+                  <input class="textbox" type="text" placeholder="Latitude" name="Latitude" id="Latitude" />
+              </li>
+              <li>
+              	<button class="button" onclick="getLocation();">Obtener ubicación</button>	
               </li>
               <li>
                   <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
               </li>
               <li>
-              <textarea class="textarea required" placeholder="Observations" required="" name="Observations" id="Observations"></textarea>
+              <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>
               </li>
               <li>
               	<button class="button" onclick="capturarFoto();">Capturar Foto</button>
@@ -172,6 +174,9 @@
   <script defer src="js/script.js"></script>
   <!-- end scripts -->
 
+<script type="text/javascript">
+        app.initialize();
+    </script>
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->

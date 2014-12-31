@@ -57,11 +57,13 @@ C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\plugins \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\project-detail.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\project-gallery.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\recent.php \
+C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\register_plant.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\registro.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\res \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\search.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\service-detail.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\spec \
+C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\www \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\css\animate.css \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\css\bootstrap-responsive.css \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\css\bootstrap.css \
@@ -299,4 +301,5 @@ C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\spec\lib\jasmine-1.2.0\
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine.css \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine.js \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\spec\lib\jasmine-1.2.0\MIT.LICENSE \
+C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\www\register_plant.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\ant-build\AndroidManifest.xml \
