@@ -34,7 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
+  
 
   <!-- end LESS -->
   <!-- fonts -->
@@ -86,8 +86,8 @@
       <br>
       <div class="padpage">
       		<h4>Grados</h4>
-            <input class="textbox" type="text" placeholder="0" required name="deegres" id="deegres" />
-            <img  id="imgCompass" src="images/Compass.png" width="350" height="350">
+            <input class="textbox" type="text" placeholder="0" required name="deegres" id="txtHeading" />
+            <img  id="imgCompass" src="images/Compass.png" width="330" height="330">
 				<button class="button"  onclick="startWatch();">Comenzar</button>
 				<button class="button" onclick="stopWatch();">Parar</button>
        </div>
@@ -170,6 +170,8 @@
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
-
+	<script type="text/javascript">
+        app.initialize();
+    </script>
 </body>
 </html>
