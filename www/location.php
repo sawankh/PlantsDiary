@@ -32,7 +32,7 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/style.css" />
+  <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 
@@ -66,20 +66,21 @@
   </header>
   <div role="main">
     
-    <div id="blogPage" data-role="page" class="page innerPage padpage padtop padbottom">
+    <div id="blogPage" data-role="page" class="page innerPage">
       <div class="topGrahic"></div>
       <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
       <h1><a href="#">Ubicaci&oacute;n actual</a></h1>
-      
+      <div class="padpage">
       <button class="button" onclick="obtenerPosicion();">Obtener ubicación</button>	
       <p id="geoPos"></p>
-	  <div id="map-page" data-url="map-page">
-		<div role="main" class="ui-content" id="map-canvas">
+	  <div id="map-page" class="map" class="map-canvas" data-url="map-page">
+		<div role="main" class="ui-content" style="height: 300px;" id="map-canvas">
 		<!-- map loads here... -->
 		</div>
 	  </div>
+      </div>
       <br>
       <br>
       <div class="footer">
