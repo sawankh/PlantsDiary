@@ -49,6 +49,8 @@ var app = {
 };
 
 
+
+
 /// Parte sensor Compass ///
 
 document.addEventListener("deviceready", onDeviceReady, false);

@@ -79,7 +79,7 @@
       
       <h4> Datos </h4>
           
-          <form action="send-email.php" method="POST" data-enhance="false" />
+          <form action="register_plant.php" method="POST" data-enhance="false" />
             <ul>
               <li>
                   <input class="textbox" type="text" placeholder="Nombre cient&iacute;fico" required name="NameSci" id="NameSci" />
@@ -97,7 +97,7 @@
                   <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
               </li>
               <li>
-              <textarea class="textarea required" placeholder="Observations" required="" name="Observations" id="Observations"></textarea>
+              <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>
               </li>
               <li>
               	<button class="button" onclick="capturarFoto();">Capturar Foto</button>
