@@ -88,7 +88,10 @@
                   <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
               </li>
               <li>
-                  <input class="textbox" type="text" placeholder="Location" name="Location" id="Location" />
+                  <input class="textbox" type="text" placeholder="Longitude" name="Longitude" id="Longitude" />
+              </li>
+              <li>
+                  <input class="textbox" type="text" placeholder="Latitude" name="Latitude" id="Latitude" />
               </li>
               <li>
               	<button class="button" onclick="obtenerPosicion();">Obtener ubicación</button>	
