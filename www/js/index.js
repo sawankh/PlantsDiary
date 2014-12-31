@@ -64,9 +64,9 @@ function onSuccess(position) {
     //These variables will be used while storing data in local database 
     lat = position.coords.latitude;
     lng = position.coords.longitude;
-    alert('Lattitude: ' + lat + ' Longitude: ' + long);
-    sessionStorage.setItem('lattitude', lat);
-    sessionStorage.setItem('longitude', lng);
+    alert('Lattitude: ' + lat + ' Longitude: ' + lng);
+    sessionStorage.setItem('Latitude', lat);
+    sessionStorage.setItem('Longitude', lng);
 }
 // onError Callback receives a PositionError object
 //

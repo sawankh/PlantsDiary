@@ -34,8 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-
+ 
   <!-- end LESS -->
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css' />
@@ -94,7 +93,7 @@
                   <input class="textbox" type="text" placeholder="Latitude" name="Latitude" id="Latitude" />
               </li>
               <li>
-              	<button class="button" onclick="obtenerPosicion();">Obtener ubicación</button>	
+              	<button class="button" onclick="getLocation();">Obtener ubicación</button>	
               </li>
               <li>
                   <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
@@ -175,6 +174,9 @@
   <script defer src="js/script.js"></script>
   <!-- end scripts -->
 
+<script type="text/javascript">
+        app.initialize();
+    </script>
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
