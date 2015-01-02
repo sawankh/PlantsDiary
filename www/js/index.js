@@ -137,15 +137,15 @@ function capturarFoto() {
 	navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, {
 		quality : 100,
 		destinationType : Camera.DestinationType.FILE_URI,
-		targetWidth : 338,
-		targetHeight : 450,
+		targetWidth : 305,
+		targetHeight : 425,
 		saveToPhotoAlbum : false
 	});
 }
 
 function onPhotoSuccess(imageData) {
 	// Get image handle
-	console.log(JSON.stringify(imageData));
+	//console.log(JSON.stringify(imageData));
 	// Get image handle
 	//
 	var smallImage = document.getElementById('imageCamara');
