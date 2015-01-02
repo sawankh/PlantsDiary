@@ -34,6 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
+  <script src="js/index.js"></script>
  
   <!-- end LESS -->
   <!-- fonts -->
@@ -89,7 +90,7 @@
                   <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
               </li>
                <li>
-              	<button class="button" onclick="getLocation();">Obtener ubicación</button>	
+              	<input type="button" class="button" value="Obtener Ubicaci&oacute;n" onClick="getLocation();"/>	
               </li>
               <li>
                   <input class="textbox" type="text" placeholder="Latitude" name="Latitude" id="Latitude" />
@@ -101,12 +102,13 @@
                   <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
               </li>
               <li>
-              <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>
-              </li>
-              <li>
               	<button class="button" onclick="capturarFoto();">Capturar Foto</button>
 				<br><br> <img style="display: none;" id="imageCamara" src="" />
               </li>
+              <li>
+              <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>
+              </li>
+              
             </ul>
             
             <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />
