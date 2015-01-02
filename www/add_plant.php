@@ -101,9 +101,11 @@
               <li>
                   <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
               </li>
+                <li>
+              	<input type="button" class="button" value="Capturar Foto" onClick="capturarFoto();"/>
+              </li>
               <li>
-              	<button class="button" onclick="capturarFoto();">Capturar Foto</button>
-				<br><br> <img style="display: none;" id="imageCamara" src="" />
+				<br> <img style="display: none;" id="imageCamara" src="" /> <br>
               </li>
               <li>
               <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>

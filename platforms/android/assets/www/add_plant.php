@@ -34,6 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
+  <script src="js/index.js"></script>
  
   <!-- end LESS -->
   <!-- fonts -->
@@ -57,30 +58,7 @@
           })();
   </script>
   
-  <script>
-  	var dirIP = '192.168.1.109';
-  	
-  	$('#enviar').submit(function(evento) {
-					evento.preventDefault();
-					var datos_formulario = $(this).serialize();
-					$.ajax({
-						url : 'http://' + dirIP + '/PlantsDiary/www/register_plant.php',
-						data : datos_formulario,
-						type : 'POST',
-						success : function(datos) {
-							$("#lnkDialogEnv").click();
-							$('input[name="NameSci"]').val('');
-							$('input[name="NameCom"]').val('');
-							$('input[name="Longitude"]').val('');
-							$('input[name="Latitude"]').val('');
-							$('input[name="Date"]').val('');
-							$('input[name="Observations"]').val('');
-							$('input[name="Image"]').val('');
-						}	
-					});
 
-				});
-  </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
@@ -111,28 +89,28 @@
               <li>
                   <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
               </li>
-              <li>
-                  <input class="textbox" type="text" placeholder="Longitude" name="Longitude" id="Longitude" />
+               <li>
+              	<input type="button" class="button" value="Obtener Ubicaci&oacute;n" onClick="getLocation();"/>	
               </li>
               <li>
                   <input class="textbox" type="text" placeholder="Latitude" name="Latitude" id="Latitude" />
               </li>
               <li>
-              	<button class="button" onclick="getLocation();">Obtener ubicación</button>	
+                  <input class="textbox" type="text" placeholder="Longitude" name="Longitude" id="Longitude" />
               </li>
               <li>
                   <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
               </li>
+                <li>
+              	<input type="button" class="button" value="Capturar Foto" onClick="capturarFoto();"/>
+              </li>
+              <li>
+				<br> <img style="display: none;" id="imageCamara" src="" /> <br>
+              </li>
               <li>
               <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>
               </li>
-              <li>
-                  <input class="textbox" type="image" placeholder="Image" required name="Image" id="Image"/>
-              </li>
-              <li>
-              	<button class="button" onclick="capturarFoto();">Capturar Foto</button>
-				<br> <img style="display: none;" id="imageCamara" src="" />
-              </li>
+              
             </ul>
             
             <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />

@@ -116,7 +116,7 @@ $(document).ready(function(){
                                }
                            }
                            
-                       })
+                       });
                    
                        
                    },
@@ -193,6 +193,8 @@ $(document).ready(function(){
 
 var windowLoaded = false;
 
+var dirIP = '192.168.1.109';
+
 var App = {
     init: function(){
         
@@ -245,7 +247,7 @@ var App = {
                 App.refreshMaps();  
                 //$(btn).text($(btn).attr('data-opened')).addClass('notransform');
             }, 700);
-        })
+        });
         
         this.Forms.bind();
         this.refreshMaps();
@@ -300,7 +302,7 @@ var App = {
      },
      
      
-     
+   
      
             
             Forms: {
@@ -323,22 +325,25 @@ var App = {
                                   
                                   //now submit form via ajax
                                   $.ajax({
-                                    url: $(formEl).attr("action"),
-                                    type: $(formEl).attr("method"),
+                                  	
+                                    url: 'http://' + dirIP + '/PlantsDiary/www/register_plant.php',
+                                    type: 'POST',
                                     data: $(formEl).serialize(),
                                     success: function(r) {
                                        $(".successMessage").slideDown('fast');
-                                       $('html,body').stop().animate({
-                                          scrollTop: $(".successMessage").offset().top - 30
-                                       }, 300);
-                                       
+                                       // $('html,body').stop().animate({
+                                          // scrollTop: $(".successMessage").offset().top - 30
+                                       // }, 300);
+                                       console.log("Llamada Ajax script.js");
                                        $(formEl).find('input[type="text"], input[type="email"], input[type="tel"], select').val('');
+                                     
                                        $(formEl).find('textarea').val('');
                                        setTimeout(function(){
                                           $(".successMessage").slideUp('fast');
                                        }, 4000);
+                                       alert('Información almacenada en la base de datos');
                                     }
-                                  })
+                                  });
                                   return false;
                           }else{
                                   return false;
