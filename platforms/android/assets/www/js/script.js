@@ -328,14 +328,16 @@ var App = {
                                   	
                                     url: 'http://' + dirIP + '/PlantsDiary/www/register_plant.php',
                                     type: 'POST',
-                                    data: $(formEl).serialize(),
+                                    data: new FormData(this),
+									processData: false, 
+									contentType: false,
                                     success: function(r) {
                                        $(".successMessage").slideDown('fast');
                                        // $('html,body').stop().animate({
                                           // scrollTop: $(".successMessage").offset().top - 30
                                        // }, 300);
                                        console.log("Llamada Ajax script.js");
-                                       $(formEl).find('input[type="text"], input[type="email"], input[type="tel"], select').val('');
+                                       $(formEl).find('input[type="text"], input[type="email"], input[type="tel"], select, input[type="file"], input[type="date"]').val('');
                                      
                                        $(formEl).find('textarea').val('');
                                        setTimeout(function(){
