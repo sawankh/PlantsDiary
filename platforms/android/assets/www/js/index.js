@@ -139,7 +139,7 @@ function capturarFoto() {
 		destinationType : Camera.DestinationType.FILE_URI,
 		targetWidth : 305,
 		targetHeight : 425,
-		saveToPhotoAlbum : false
+		saveToPhotoAlbum : true
 	});
 }
 
@@ -152,6 +152,10 @@ function onPhotoSuccess(imageData) {
 	// Unhide image elements
 	//
 	smallImage.style.display = 'block';
+	
+	var url = document.getElementById('URL');
+	url.value = imageData;
+	
 	// Show the captured photo
 	// The inline CSS rules are used to resize the image
 	//

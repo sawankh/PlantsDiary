@@ -58,6 +58,60 @@
           })();
   </script>
   
+  <script type="text/javascript" charset="utf-8">
+
+ 
+
+    function uploadPhoto() {
+
+        //selected photo URI is in the src attribute (we set this on getPhoto)
+        var imageURI = document.getElementById('imageCamara').getAttribute("src");
+        if (!imageURI) {
+            alert('Please select an image first.');
+            return;
+        }
+
+        //set upload options
+        var options = new FileUploadOptions();
+        options.fileKey = "file";
+        options.fileName = imageURI.substr(imageURI.lastIndexOf('/')+1);
+        options.mimeType = "image/jpeg";
+
+        options.params = {
+			
+				'NameSci'		:	document.getElementsByClassName("NameSci").val(),
+				'NameCom'		:	document.getElementsByClassName("NameCom").val(),
+				'Longitude'		:	document.getElementsByClassName("Longitude").val(),
+				'Latitude'		:	document.getElementsByClassName("Latitude").val(),
+				'Date'			:	document.getElementsByClassName("Date").val(),
+				'Observations'	:	document.getElementsByClassName("Observations").val()
+	
+        }
+
+        var ft = new FileTransfer();
+        ft.upload(imageURI, encodeURI("http:192.168.1.109/PlantsDiary/www/register_plant.php"), win, fail, options);
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      console.log('Failed because: ' + message);
+    }
+
+    function win(r) {
+        console.log("Code = " + r.responseCode);
+        console.log("Response = " + r.response);
+        //alert("Response =" + r.response);
+        console.log("Sent = " + r.bytesSent);
+    }
+
+    function fail(error) {
+        alert("An error has occurred: Code = " + error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
+    }
+
+    </script>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
@@ -103,6 +157,9 @@
               </li>
                 <li>
               	<input type="button" class="button" value="Capturar Foto" onClick="capturarFoto();"/>
+              </li>
+              <li>
+              	  <input class="textbox" type="file" placeholder="URL" required name="URL" id="URL"/>
               </li>
               <li>
 				<br> <img style="display: none;" id="imageCamara" src="" /> <br>
