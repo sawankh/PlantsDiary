@@ -115,8 +115,6 @@
 
    <script type="text/javascript" charset="utf-8">
  
- 	
-	var dirIP = '192.168.1.109';
         // Wait for PhoneGap to load
         document.addEventListener("deviceready", onDeviceReady, false);
  
@@ -152,7 +150,7 @@
             options.chunkedMode = false;
  
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http:192.168.1.109/PlantsDiary/www/register_plant.php", win, fail, options);
+            ft.upload(imageURI, "http://yourdomain.com/upload.php", win, fail, options);
         }
  
         function win(r) {
