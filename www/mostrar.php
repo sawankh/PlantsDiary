@@ -3,8 +3,8 @@
 	header("Content-Type: application/json; charset=UTF-8");
 	
 	$link = mysql_connect("localhost", "root", "") or die('No se pudo conectar: ' . mysql_error());
-	mysql_select_db('productos') or die('No se pudo seleccionar la base de datos');
-	$query = 'SELECT * FROM productos';
+	mysql_select_db('plants') or die('No se pudo seleccionar la base de datos');
+	$query = 'SELECT * FROM plants';
 	
 	$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 	
