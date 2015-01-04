@@ -19,11 +19,14 @@
 	
 	$i = 0;
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$row['PICTURE'] = base64_encode($row['PICTURE']);
 		$rawdata[$i] = $row;
 		$i++;
 	}
 	
 	mysql_close($link);
+	
+	
 	
 	echo json_encode($rawdata, JSON_UNESCAPED_UNICODE);
 ?>
