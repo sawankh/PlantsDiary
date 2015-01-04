@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="less/libs/jquery.mobile-1.1.1.css" />
   <link rel="stylesheet" href="less/libs/flexslider.css" />
   <link rel="stylesheet" href="less/photoswipe/photoswipe.css" />
-
+  <link rel="stylesheet" href="css/index.css" />
 
 
     
@@ -44,6 +44,7 @@
        Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects;
        for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="js/table.js"></script>
   <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-XXXXX-X']);
@@ -71,15 +72,21 @@
       </a>
       
       <div class="padpage padtop">
-        <h1><a href="#">Listar</a></h1>
-      
+      	<form action="list.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data" />
+		<li>
+			<input type="submit" class="button buttonStrong right listarContenido" value="Listar" name="buttonList" value="submit" />
+		</li>
+		</form>
+       	
+            
         <p>
           Listado de todas las muestras disponibles.
         </p>
+        <div id="resultado">
+	
+		</div>
       </div>
-      <div class="padpage">
-      	<input type="submit" class="button buttonStrong right" value="Listar" name="buttonSubmit" value="submit" />
-      </div>
+      
         
       
       <div class="padpage padbottom">
@@ -149,7 +156,9 @@
   <script defer src="js/plugins.js"></script>
   <script defer src="js/script.js"></script>
   <!-- end scripts -->
-
+<script type="text/javascript">
+        app.initialize();
+    </script>
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->

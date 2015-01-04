@@ -57,30 +57,105 @@
           })();
   </script>
   
-  <script>
-  	var dirIP = '192.168.1.109';
-  	
-  	$('#enviar').submit(function(evento) {
-					evento.preventDefault();
-					var datos_formulario = $(this).serialize();
-					$.ajax({
-						url : 'http://' + dirIP + '/PlantsDiary/www/register_plant.php',
-						data : datos_formulario,
-						type : 'POST',
-						success : function(datos) {
-							$("#lnkDialogEnv").click();
-							$('input[name="NameSci"]').val('');
-							$('input[name="NameCom"]').val('');
-							$('input[name="Longitude"]').val('');
-							$('input[name="Latitude"]').val('');
-							$('input[name="Date"]').val('');
-							$('input[name="Observations"]').val('');
-							$('input[name="Image"]').val('');
-						}	
-					});
+  <script type="text/javascript" charset="utf-8">
+ 
+    function uploadPhoto() {
+        //selected photo URI is in the src attribute (we set this on getPhoto)
+        var imageURI = document.getElementById('imageCamara').getAttribute("src");
+        if (!imageURI) {
+            alert('Please select an image first.');
+            return;
+        }
+        //set upload options
+        var options = new FileUploadOptions();
+        options.fileKey = "file";
+        options.fileName = imageURI.substr(imageURI.lastIndexOf('/')+1);
+        options.mimeType = "image/jpeg";
+        options.params = {
+			
+				'NameSci'		:	document.getElementsByClassName("NameSci").val(),
+				'NameCom'		:	document.getElementsByClassName("NameCom").val(),
+				'Longitude'		:	document.getElementsByClassName("Longitude").val(),
+				'Latitude'		:	document.getElementsByClassName("Latitude").val(),
+				'Date'			:	document.getElementsByClassName("Date").val(),
+				'Observations'	:	document.getElementsByClassName("Observations").val()
+	
+        }
+        var ft = new FileTransfer();
+        ft.upload(imageURI, encodeURI("http:192.168.1.109/PlantsDiary/www/register_plant.php"), win, fail, options);
+    }
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      console.log('Failed because: ' + message);
+    }
+    function win(r) {
+        console.log("Code = " + r.responseCode);
+        console.log("Response = " + r.response);
+        //alert("Response =" + r.response);
+        console.log("Sent = " + r.bytesSent);
+    }
+    function fail(error) {
+        alert("An error has occurred: Code = " + error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
+    }
+    </script>
 
-				});
-  </script>
+   <script type="text/javascript" charset="utf-8">
+ 
+ 	
+	var dirIP = '192.168.1.109';
+        // Wait for PhoneGap to load
+        document.addEventListener("deviceready", onDeviceReady, false);
+ 
+        // PhoneGap is ready
+        function onDeviceReady() {
+ 		// Do cool things here...
+        }
+ 
+        function getImage() {
+            // Retrieve image file location from specified source
+            navigator.camera.getPicture(uploadPhoto, function(message) {
+			alert('get picture failed');
+		},{
+			quality: 50, 
+			destinationType: navigator.camera.DestinationType.FILE_URI,
+			sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+		}
+            );
+ 
+        }
+ 
+        function uploadPhoto(imageURI) {
+            var options = new FileUploadOptions();
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+ 
+            var params = new Object();
+            params.value1 = "test";
+            params.value2 = "param";
+ 
+            options.params = params;
+            options.chunkedMode = false;
+ 
+            var ft = new FileTransfer();
+            ft.upload(imageURI, "http:192.168.1.109/PlantsDiary/www/register_plant.php", win, fail, options);
+        }
+ 
+        function win(r) {
+            console.log("Code = " + r.responseCode);
+            console.log("Response = " + r.response);
+            console.log("Sent = " + r.bytesSent);
+            alert(r.response);
+        }
+ 
+        function fail(error) {
+         
+        }
+ 
+        </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
@@ -103,7 +178,7 @@
       
       <h4> Datos </h4>
           
-          <form action="register_plant.php" id="enviar" method="POST" data-enhance="false" />
+          <form action="register_plant.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data" />
             <ul>
               <li>
                   <input class="textbox" type="text" placeholder="Nombre cient&iacute;fico" required name="NameSci" id="NameSci" />
@@ -111,31 +186,33 @@
               <li>
                   <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
               </li>
-              <li>
-                  <input class="textbox" type="text" placeholder="Longitude" name="Longitude" id="Longitude" />
+               <li>
+              	<input type="button" class="button" value="Obtener Ubicaci&oacute;n" onClick="getLocation();"/>
               </li>
               <li>
                   <input class="textbox" type="text" placeholder="Latitude" name="Latitude" id="Latitude" />
               </li>
               <li>
-              	<button class="button" onclick="getLocation();">Obtener ubicación</button>	
+                  <input class="textbox" type="text" placeholder="Longitude" name="Longitude" id="Longitude" />
               </li>
               <li>
                   <input class="textbox" type="date" placeholder="Date" required name="Date" id="Date"/>
               </li>
+                <li>
+             	<input type="button" class="button" value="Capturar Foto" onClick="capturarFoto();"/>
+              </li>
+               <li>
+              	  <input class="textbox" type="file" placeholder="URL" required name="URL" id="URL"/>
+              </li>
+              <li>
+				<br> <img style="display: none;" id="imageCamara" src="" /> <br>
+              </li>
               <li>
               <textarea class="textarea required" placeholder="Observations" required name="Observations" id="Observations"></textarea>
               </li>
-              <li>
-                  <input class="textbox" type="image" placeholder="Image" required name="Image" id="Image"/>
-              </li>
-              <li>
-              	<button class="button" onclick="capturarFoto();">Capturar Foto</button>
-				<br> <img style="display: none;" id="imageCamara" src="" />
-              </li>
             </ul>
             
-            <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />
+            <input type="submit" class="button buttonStrong right enviarContenido" value="Send" name="buttonSubmit" value="submit" />
             <div class="clearfix"></div>                
           </form>
         
