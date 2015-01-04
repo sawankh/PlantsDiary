@@ -92,6 +92,48 @@ function CreateTableView(objArray, theme, enableHeader) {
     str += '</table>';
     return str;
 }
+
+
+// This function creates a details view table with column 1 as the header and column 2 as the details
+// Parameter Information
+// objArray = Anytype of object array, like JSON results
+// theme (optional) = A css class to add to the table (e.g. <table class="<theme>">
+// enableHeader (optional) = Controls if you want to hide/show, default is show
+function CreateGallery(objArray) {
+    
+    // If the returned data is an object do nothing, else try to parse
+    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+
+ 
+	var str = '<div class="iscroll" id="galleryScroller" data-ajax="false"><div class="scroller"> <ul class="menu">'; 
+    for (var i = 0; i < array.length; i++) {
+		str += (i % 3 == 0) ? '<li><ul class="section">' : ' ';
+		for (var index in array[i]) {
+			if (index == "PICTURE")
+        	{
+				str += '<li class="square"><a class="box gallery-item" href=\"data:image/gif;base64,' + array[i][index] +  '\">';
+        		console.log(array[i][index]);
+        		str += '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="300" height="500" alt="embedded folder icon" />';
+				str += ' </a></li>';
+        	}
+		}
+		
+		str += (i % 3 == 2) ? '</ul></li>' : ' ';
+		
+		if ( i == (array.length - 1)) {
+			if ( i % 3 == 1) {
+				str += '</ul></li>';
+			} else if (i % 3 == 0) {
+				str += '</ul></li>';
+			}
+		}
+	}
+     
+	 str += ' </ul></div></div>';
+	 
+    return str;
+}
+
 /*
  Author:
  Rahul Vagadiya (theunexpected1)
@@ -434,6 +476,25 @@ var App = {
 									$(".successMessage").slideDown('fast');
 
 									$("#resultado").html(CreateTableView(datos, "CSSTableGenerator", true));
+									setTimeout(function() {
+										$(".successMessage").slideUp('fast');
+									}, 4000);
+								}
+							});
+						}
+
+							if ($(this).find("input[type=submit]:focus").attr("name") == "buttonGallery") {
+							$.ajax({
+								url : 'http://' + dirIP + '/PlantsDiary/www/mostrar_galeria.php',
+								type : 'POST',
+								data : $(formEl).serialize(),
+								beforeSend : function() {
+									$("#resultado").html('<img align="middle"  style="padding-left:150px;"  src="img/ajax-loader.gif">');
+								},
+								success : function(datos) {
+									$(".successMessage").slideDown('fast');
+
+									$("#resultado").html(CreateGallery(datos));
 									setTimeout(function() {
 										$(".successMessage").slideUp('fast');
 									}, 4000);

@@ -26,6 +26,8 @@
 	
 	mysql_close($link);
 	
+	
+	
 	echo json_encode($rawdata, JSON_UNESCAPED_UNICODE);
 ?>
     
