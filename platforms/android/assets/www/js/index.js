@@ -165,6 +165,10 @@ function onPhotoFail(message) {
 }
 
 // / Parte Vibración ///
+function vibrate() {
+	navigator.vibrate([ 2000 ]);
+}
+
 
 function vibrarMovil() {
 	navigator.vibrate([ 100000 ]);

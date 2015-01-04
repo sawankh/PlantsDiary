@@ -19,6 +19,7 @@
 	
 	$i = 0;
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$row['PICTURE'] = base64_encode($row['PICTURE']);
 		$rawdata[$i] = $row;
 		$i++;
 	}

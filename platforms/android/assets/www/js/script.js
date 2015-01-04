@@ -47,43 +47,51 @@ function CreateTableView(objArray, theme, enableHeader) {
 // objArray = Anytype of object array, like JSON results
 // theme (optional) = A css class to add to the table (e.g. <table class="<theme>">
 // enableHeader (optional) = Controls if you want to hide/show, default is show
-function CreateDetailView(objArray, theme, enableHeader) {
-	// set optional theme parameter
-	if (theme === undefined) {
-		theme = 'mediumTable';
-		//default theme
-	}
+function CreateTableView(objArray, theme, enableHeader) {
+    // set optional theme parameter
+    if (theme === undefined) {
+        theme = 'mediumTable'; //default theme
+    }
+    
+ 
+    if (enableHeader === undefined) {
+        enableHeader = true; //default enable headers
+    }
+ 
+    // If the returned data is an object do nothing, else try to parse
+    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
 
-	if (enableHeader === undefined) {
-		enableHeader = true;
-		//default enable headers
-	}
-
-	// If the returned data is an object do nothing, else try to parse
-	var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
-
-	var str = '<table class="' + theme + '">';
-	str += '<tbody>';
-
-	for (var i = 0; i < array.length; i++) {
-		var row = 0;
-		for (var index in array[i]) {
-			str += (row % 2 == 0) ? '<tr class="alt">' : '<tr>';
-
-			if (enableHeader) {
-				str += '<th scope="row">' + index + '</th>';
-			}
-
-			str += '<td>' + array[i][index] + '</td>';
-			str += '</tr>';
-			row++;
-		}
-	}
-	str += '</tbody>'
-	str += '</table>';
-	return str;
+    var str = '<table data-role="table" data-mode="columntoggle" class="' + theme + '">';
+     
+    // table head
+    if (enableHeader) {
+        str += '<tbody><tr>';
+        for (var index in array[0]) {
+            str += '<td scope="col">' + index + '</td>';
+        }
+        str += '</tr>';
+    }
+     
+    // table body
+    for (var i = 0; i < array.length; i++) {
+        str += (i % 2 == 0) ? '<tr class="alt">' : '<tr>';
+        for (var index in array[i]) {
+        	if (index == "PICTURE")
+        	{
+        		console.log(array[i][index]);
+        		str += '<td>' + 
+               '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="30" height="50" alt="embedded folder icon">'
+				 + '</td>';
+        	} else {
+        		str += '<td>' + array[i][index] + '</td>';
+        	}
+        }
+        str += '</tr>';
+    }
+    str += '</tbody>'
+    str += '</table>';
+    return str;
 }
-
 /*
  Author:
  Rahul Vagadiya (theunexpected1)
@@ -389,7 +397,7 @@ var App = {
 					});
 
 					$(this).each(function() {
-						if ($(this).find(".enviarContenido")) {
+						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonSubmit") {
 							$.ajax({
 								url : 'http://' + dirIP + '/PlantsDiary/www/register_plant.php',
 								type : 'POST',
@@ -414,13 +422,13 @@ var App = {
 
 						}
 
-						if ($(this).find(".listarContenido")) {
+						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonList") {
 							$.ajax({
 								url : 'http://' + dirIP + '/PlantsDiary/www/mostrar.php',
 								type : 'POST',
 								data : $(formEl).serialize(),
 								beforeSend : function() {
-									$("#resultado").html('<img align="middle"  style="padding-left:150px;"  src="image/loader.GIF">');
+									$("#resultado").html('<img align="middle"  style="padding-left:150px;"  src="img/ajax-loader.gif">');
 								},
 								success : function(datos) {
 									$(".successMessage").slideDown('fast');

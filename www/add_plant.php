@@ -212,7 +212,7 @@
               </li>
             </ul>
             
-            <input type="submit" class="button buttonStrong right enviarContenido" value="Send" name="buttonSubmit" value="submit" />
+            <input type="submit" class="button buttonStrong right enviarContenido" value="Send" onClick="vibrate();" name="buttonSubmit" value="submit" />
             <div class="clearfix"></div>                
           </form>
         
