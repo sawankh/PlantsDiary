@@ -86,6 +86,7 @@
         <span class="h2">
           Entradas recientes.
         </span>
+        <div id="result"></div>
       </div>
   
           
