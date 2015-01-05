@@ -82,8 +82,10 @@
         <span class="h2">
           Indique nombre
         </span>
-         <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
-         <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />
+          <form action="query_plant.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
+        <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="Search" id="Search" />
+		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonSerach" >
+		</form>
       </div>
     
     
