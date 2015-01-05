@@ -34,6 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <!-- end LESS -->
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css' />
@@ -88,7 +89,10 @@
 		</form>
         <br>
         <br>
+        <div id="map" style=" height: 1px;"></div>
         <div id="result"></div>
+	    
+	</div>
       </div>
     
     

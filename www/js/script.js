@@ -1,3 +1,50 @@
+function f1(lat, lon) {
+	var map;
+    var elevator;
+    var latlng=new google.maps.LatLng(lat, lon);
+    var myOptions = {
+        zoom: 11,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map($('#map')[0], myOptions);
+
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        icon: 'http://google-maps-icons.googlecode.com/files/walking-tour.png',
+        draggable: true
+    });
+
+    $('#map').css( "height", "300px" );
+    window.scrollTo(0, 0);
+    refresh(lat,lon);
+}
+
+function refresh(lat, lon) {
+	var map;
+    var elevator;
+    var latlng=new google.maps.LatLng(lat, lon);
+    var myOptions = {
+        zoom: 11,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map($('#map')[0], myOptions);
+
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        icon: 'http://google-maps-icons.googlecode.com/files/walking-tour.png',
+        draggable: true
+    });
+}
+
+		
+
+
 // This function creates a standard table with column/rows
 // Parameter Information
 // objArray = Anytype of object array, like JSON results
@@ -18,33 +65,37 @@ function CreateTableView(objArray, theme, enableHeader) {
     var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
 
     var str = '<table data-role="table" data-mode="columntoggle" class="' + theme + '">';
-     
-    // table head
-    if (enableHeader) {
-        str += '<tbody><tr>';
-        for (var index in array[0]) {
-            str += '<td scope="col">' + index + '</td>';
-        }
-        str += '</tr>';
-    }
-     
+    var atributos = ["Nombre científico: ", "Nombre común: ", "Longitud: ", "Latitud: ", "Fecha: ", "Observaciones: "]
+	 
     // table body
+    var lon = 0;
     for (var i = 0; i < array.length; i++) {
         str += (i % 2 == 0) ? '<tr class="alt">' : '<tr>';
-        for (var index in array[i]) {
-        	if (index == "PICTURE")
-        	{
-        		console.log(array[i][index]);
-        		str += '<td>' + 
-               '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="30" height="50" alt="embedded folder icon">'
-				 + '</td>';
-        	} else {
-        		str += '<td>' + array[i][index] + '</td>';
-        	}
-        }
-        str += '</tr>';
+		for (var index in array[i]) { 
+			if (index == "SPECIES")
+				str += '<table><tr><td scope="col"><b>' + atributos[0] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+			else if (index == "COMMON")
+				str += '<table><tr><td scope="col"><b>' + atributos[1] + '</b></td><td>' + array[i][index] + '</td></tr></table>';				
+			else if (index == "LONGITUDE") {
+				lon = array[i][index];
+				str += '<table><tr><td scope="col"><b>' + atributos[2] + '</b></td><td>' + array[i][index] + '</td>';
+			} else if (index == "LATITUDE") {
+				str += '<td scope="col"><b>' + "     " + atributos[3] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+				str += '<button onclick=\"f1(' + array[i][index] + ', ' + lon + ')\" class=\"button buttonStrong\" style=\" width: 150px;\">Ver mapa</button>';
+				//str += '<div role=\"main\" class=\"ui-content\" id=\"map-canvas\"> </div>';
+			} else if (index == "DATE")
+				str += '<table><tr><td scope="col"><b>' + atributos[4] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+			else if (index == "OBSERVATIONS")
+				str += '<table><tr><td scope="col"><b>' + atributos[5] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+			else if (index == "PICTURE") {
+				str += '<table><tr><td>' + 
+				'<img align=center src=\"data:image/gif;base64,' + array[i][index] +  '\"width="100" height="140" alt="embedded folder icon">'
+				+ '</td></tr></table>';
+				str += '<hr color = #87c619 align="left" noshade="noshade" size="2" width="100%" />';
+			}	
+		}		     		
     }
-    str += '</tbody>'
+    str += '</tbody>';
     str += '</table>';
     return str;
 }
@@ -68,7 +119,6 @@ function CreateGallery(objArray) {
 			if (index == "PICTURE")
         	{
 				str += '<li class="square"><a class="box gallery-item ui-link photoswiped" href=\"data:image/gif;base64,' + array[i][index] +  '\">';
-        		console.log(array[i][index]);
         		str += '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="300" height="500" alt="embedded folder icon" />';
 				str += ' </a></li>';
         	}
@@ -272,7 +322,7 @@ $(document).ready(function() {
 
 var windowLoaded = false;
 
-var dirIP = '192.168.1.109';
+var dirIP = '192.168.1.35';
 
 var App = {
 	init : function() {
