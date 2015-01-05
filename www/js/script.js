@@ -479,7 +479,26 @@ var App = {
 								}
 							});
 						}
-
+	
+						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonSerach") {
+							$.ajax({
+								url : 'http://' + dirIP + '/PlantsDiary/www/query_plant.php',
+								type : 'POST',
+								data : $(formEl).serialize(),
+								beforeSend : function() {
+									$("#result").html('<img align="middle"  style="padding-left:150px;"  src="img/ajax-loader.gif">');
+								},
+								success : function(datos) {
+									$(".successMessage").slideDown('fast');
+									
+									$("#result").html(String(CreateGallery(datos)));
+									$(window).resize();
+									setTimeout(function() {
+										$(".successMessage").slideUp('fast');
+									}, 4000);
+								}
+							});
+						}
 
 					});
 

@@ -86,6 +86,9 @@
         <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="Search" id="Search" />
 		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonSerach" >
 		</form>
+        <br>
+        <br>
+        <div id="result"></div>
       </div>
     
     
