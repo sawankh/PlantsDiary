@@ -53,6 +53,7 @@ C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\list.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\location.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\mostrar.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\mostrarConCondicion.php \
+C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\mostrar_galeria.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\plugins \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\project-detail.php \
 C:\xampp\htdocs\PlantsDiary\platforms\android\assets\www\project-gallery.php \

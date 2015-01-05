@@ -42,56 +42,63 @@ function CreateTableView(objArray, theme, enableHeader) {
 	return str;
 }
 
+function zoomIn()
+{
+    var Page = document.getElementById('Body');
+    var zoom = parseInt(Page.style.zoom) + 10 +'%'
+    Page.style.zoom = zoom;
+    return false;
+}
+ 
+function zoomOut()
+{
+    var Page = document.getElementById('Body');
+    var zoom = parseInt(Page.style.zoom) - 10 +'%'
+    Page.style.zoom = zoom;
+    return false;
+}
+
 // This function creates a details view table with column 1 as the header and column 2 as the details
 // Parameter Information
 // objArray = Anytype of object array, like JSON results
 // theme (optional) = A css class to add to the table (e.g. <table class="<theme>">
 // enableHeader (optional) = Controls if you want to hide/show, default is show
-function CreateTableView(objArray, theme, enableHeader) {
-    // set optional theme parameter
-    if (theme === undefined) {
-        theme = 'mediumTable'; //default theme
-    }
+function CreateGallery(objArray) {
     
- 
-    if (enableHeader === undefined) {
-        enableHeader = true; //default enable headers
-    }
- 
     // If the returned data is an object do nothing, else try to parse
     var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
 
-    var str = '<table data-role="table" data-mode="columntoggle" class="' + theme + '">';
-     
-    // table head
-    if (enableHeader) {
-        str += '<tbody><tr>';
-        for (var index in array[0]) {
-            str += '<td scope="col">' + index + '</td>';
-        }
-        str += '</tr>';
-    }
-     
-    // table body
-    for (var i = 0; i < array.length; i++) {
-        str += (i % 2 == 0) ? '<tr class="alt">' : '<tr>';
-        for (var index in array[i]) {
-        	if (index == "PICTURE")
+	var str = '<div class="iscroll" id="galleryScroller" data-ajax="false" style="overflow: hidden;"><div class="scroller"><ul class="menu"> ';
+	 
+	for (var i = 0; i < array.length; i++) {
+		str += (i % 3 == 0) ? '<li><ul class="section">' : ' ';
+		for (var index in array[i]) {
+			if (index == "PICTURE")
         	{
+				str += '<li class="square"><a class="box gallery-item" href=\"data:image/gif;base64,' + array[i][index] +  '\">';
         		console.log(array[i][index]);
-        		str += '<td>' + 
-               '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="30" height="50" alt="embedded folder icon">'
-				 + '</td>';
-        	} else {
-        		str += '<td>' + array[i][index] + '</td>';
+        		str += '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="300" height="500" alt="embedded folder icon" />';
+				str += ' </a></li>';
         	}
-        }
-        str += '</tr>';
-    }
-    str += '</tbody>'
-    str += '</table>';
+		}
+		
+		str += (i % 3 == 2) ? '</ul></li>' : ' ';
+		
+		if ( i == (array.length - 1)) {
+			if ( i % 3 == 1) {
+				str += '</ul></li>';
+			} else if (i % 3 == 0) {
+				str += '</ul></li>';
+			}
+		}
+	}
+     
+	
+	 str += '</ul></div></div>';
+	 
     return str;
 }
+
 /*
  Author:
  Rahul Vagadiya (theunexpected1)
@@ -434,6 +441,26 @@ var App = {
 									$(".successMessage").slideDown('fast');
 
 									$("#resultado").html(CreateTableView(datos, "CSSTableGenerator", true));
+									setTimeout(function() {
+										$(".successMessage").slideUp('fast');
+									}, 4000);
+								}
+							});
+						}
+
+							if ($(this).find("input[type=submit]:focus").attr("name") == "buttonGallery") {
+							$.ajax({
+								url : 'http://' + dirIP + '/PlantsDiary/www/mostrar_galeria.php',
+								type : 'POST',
+								data : $(formEl).serialize(),
+								beforeSend : function() {
+									$("#result").html('<img align="middle"  style="padding-left:150px;"  src="img/ajax-loader.gif">');
+								},
+								success : function(datos) {
+									$(".successMessage").slideDown('fast');
+									
+									$("#result").html(String(CreateGallery(datos)));
+									$(window).resize();
 									setTimeout(function() {
 										$(".successMessage").slideUp('fast');
 									}, 4000);

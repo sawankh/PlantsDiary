@@ -32,7 +32,7 @@
 
     
   <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/blue.php" />
+  <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
   <!-- end LESS -->
   <!-- fonts -->
@@ -59,9 +59,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
 <body>
-  <header>
-
-  </header>
   <div role="main">
     
     <div id="galleryPage" data-role="page" class="page innerPage padpage padtop padbottom">
@@ -71,284 +68,29 @@
       </a>
       <h1><a href="#">Gallery</a></h1>
       
-      <div class="iscroll" id="galleryScroller" data-ajax="false">
-       <div class="scroller">
+      <form action="mostrar_galeria.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
+		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonGallery" >
+		</form>
+     	<br>
+        <br>
         
-        <ul class="menu">
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/1.jpg">
-                  <img src="img/gallery/1.jpg" alt="Image1" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/2.jpg">
-                  <img src="img/gallery/2.jpg" alt="Image2" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/3.jpg">
-                  <img src="img/gallery/3.jpg" alt="Image3" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/4.jpg">
-                  <img src="img/gallery/4.jpg" alt="Image4" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/5.jpg">
-                  <img src="img/gallery/5.jpg" alt="Image5" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/6.jpg">
-                  <img src="img/gallery/6.jpg" alt="Image6" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/7.jpg">
-                  <img src="img/gallery/7.jpg" alt="Image7" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/8.jpg">
-                  <img src="img/gallery/8.jpg" alt="Image8" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/9.jpg">
-                  <img src="img/gallery/9.jpg" alt="Image9" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/10.jpg">
-                  <img src="img/gallery/10.jpg" alt="Image10" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/11.jpg">
-                  <img src="img/gallery/11.jpg" alt="Image11" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/12.jpg">
-                  <img src="img/gallery/12.jpg" alt="Image12" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/13.jpg">
-                  <img src="img/gallery/13.jpg" alt="Image13" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/14.jpg">
-                  <img src="img/gallery/14.jpg" alt="Image14" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/15.jpg">
-                  <img src="img/gallery/15.jpg" alt="Image15" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/1.jpg">
-                  <img src="img/gallery/1.jpg" alt="Image1" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/2.jpg">
-                  <img src="img/gallery/2.jpg" alt="Image2" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/3.jpg">
-                  <img src="img/gallery/3.jpg" alt="Image3" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/4.jpg">
-                  <img src="img/gallery/4.jpg" alt="Image4" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/5.jpg">
-                  <img src="img/gallery/5.jpg" alt="Image5" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/6.jpg">
-                  <img src="img/gallery/6.jpg" alt="Image6" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/7.jpg">
-                  <img src="img/gallery/7.jpg" alt="Image7" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/8.jpg">
-                  <img src="img/gallery/8.jpg" alt="Image8" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/9.jpg">
-                  <img src="img/gallery/9.jpg" alt="Image9" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/10.jpg">
-                  <img src="img/gallery/10.jpg" alt="Image10" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/11.jpg">
-                  <img src="img/gallery/11.jpg" alt="Image11" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/12.jpg">
-                  <img src="img/gallery/12.jpg" alt="Image12" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          
-          <li>
-            <ul class="section">
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/13.jpg">
-                  <img src="img/gallery/13.jpg" alt="Image13" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/14.jpg">
-                  <img src="img/gallery/14.jpg" alt="Image14" />
-                </a>
-              </li>
-              
-              <li class="square">
-                <a class="box gallery-item" href="img/gallery/15.jpg">
-                  <img src="img/gallery/15.jpg" alt="Image15" />
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          
-          
-          
-        </ul>
-          <!--end menu-->
-      </div>
-          <!--end scroller-->
-          
-          
-      </div>
-      <!--end gallery scroller-->
-          
+        <div id="result"></div>
+        
+        <br>
+        <br>
         
         
+       
         
       </div>
       
       
-     
+    
     
     
   </div>
   
-  <footer>
-
-  </footer>
+       
 
 
 

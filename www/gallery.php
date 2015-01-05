@@ -59,9 +59,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
 <body>
-  <header>
-
-  </header>
   <div role="main">
     
     <div id="galleryPage" data-role="page" class="page innerPage padpage padtop padbottom">
@@ -71,27 +68,29 @@
       </a>
       <h1><a href="#">Gallery</a></h1>
       
-      <form action="mostrar_galeria.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data" />
-		<li>
-			<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonGallery" value="submit" />
-		</li>
+      <form action="mostrar_galeria.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
+		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonGallery" >
 		</form>
-     	
-        <div id="resultado">
-        </div>
+     	<br>
+        <br>
         
+        <div id="result"></div>
+        
+        <br>
+        <br>
+        
+        
+       
         
       </div>
       
       
-     
+    
     
     
   </div>
   
-  <footer>
-
-  </footer>
+       
 
 
 
