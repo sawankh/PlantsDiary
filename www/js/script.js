@@ -4,42 +4,49 @@
 // theme (optional) = A css class to add to the table (e.g. <table class="<theme>">
 // enableHeader (optional) = Controls if you want to hide/show, default is show
 function CreateTableView(objArray, theme, enableHeader) {
-	// set optional theme parameter
-	if (theme === undefined) {
-		theme = 'mediumTable';
-		//default theme
-	}
+    // set optional theme parameter
+    if (theme === undefined) {
+        theme = 'mediumTable'; //default theme
+    }
+    
+ 
+    if (enableHeader === undefined) {
+        enableHeader = true; //default enable headers
+    }
+ 
+    // If the returned data is an object do nothing, else try to parse
+    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
 
-	if (enableHeader === undefined) {
-		enableHeader = true;
-		//default enable headers
-	}
-
-	// If the returned data is an object do nothing, else try to parse
-	var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
-
-	var str = '<table data-role="table" data-mode="columntoggle" class="' + theme + '">';
-
-	// table head
-	if (enableHeader) {
-		str += '<tbody><tr>';
-		for (var index in array[0]) {
-			str += '<td scope="col">' + index + '</td>';
-		}
-		str += '</tr>';
-	}
-
-	// table body
-	for (var i = 0; i < array.length; i++) {
-		str += (i % 2 == 0) ? '<tr class="alt">' : '<tr>';
-		for (var index in array[i]) {
-			str += '<td>' + array[i][index] + '</td>';
-		}
-		str += '</tr>';
-	}
-	str += '</tbody>'
-	str += '</table>';
-	return str;
+    var str = '<table data-role="table" data-mode="columntoggle" class="' + theme + '">';
+     
+    // table head
+    if (enableHeader) {
+        str += '<tbody><tr>';
+        for (var index in array[0]) {
+            str += '<td scope="col">' + index + '</td>';
+        }
+        str += '</tr>';
+    }
+     
+    // table body
+    for (var i = 0; i < array.length; i++) {
+        str += (i % 2 == 0) ? '<tr class="alt">' : '<tr>';
+        for (var index in array[i]) {
+        	if (index == "PICTURE")
+        	{
+        		console.log(array[i][index]);
+        		str += '<td>' + 
+               '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="30" height="50" alt="embedded folder icon">'
+				 + '</td>';
+        	} else {
+        		str += '<td>' + array[i][index] + '</td>';
+        	}
+        }
+        str += '</tr>';
+    }
+    str += '</tbody>'
+    str += '</table>';
+    return str;
 }
 
 
@@ -452,6 +459,27 @@ var App = {
 								}
 							});
 						}
+
+						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonRecent") {
+							$.ajax({
+								url : 'http://' + dirIP + '/PlantsDiary/www/mostrar_galeria.php',
+								type : 'POST',
+								data : $(formEl).serialize(),
+								beforeSend : function() {
+									$("#result").html('<img align="middle"  style="padding-left:150px;"  src="img/ajax-loader.gif">');
+								},
+								success : function(datos) {
+									$(".successMessage").slideDown('fast');
+									
+									$("#result").html(String(CreateGallery(datos)));
+									$(window).resize();
+									setTimeout(function() {
+										$(".successMessage").slideUp('fast');
+									}, 4000);
+								}
+							});
+						}
+
 
 					});
 

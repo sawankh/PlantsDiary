@@ -75,6 +75,9 @@
       	 <p>
           	Aqu&iacute; puede ver las entradas recientes a su diario.
         </p>
+         <form action="mostrar_reciente.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
+		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonRecent" >
+		</form>
       </div>
       
       <br /><br />
