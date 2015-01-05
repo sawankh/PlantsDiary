@@ -462,7 +462,7 @@ var App = {
 
 						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonRecent") {
 							$.ajax({
-								url : 'http://' + dirIP + '/PlantsDiary/www/mostrar_galeria.php',
+								url : 'http://' + dirIP + '/PlantsDiary/www/mostrar_reciente.php',
 								type : 'POST',
 								data : $(formEl).serialize(),
 								beforeSend : function() {
