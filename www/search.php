@@ -84,7 +84,7 @@
         </span>
           <form action="query_plant.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
         <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="Search" id="Search" />
-		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonSerach" >
+		<input type="submit" class="button buttonStrong right listarContenido" value="Buscar" name="buttonSearch" >
 		</form>
         <br>
         <br>

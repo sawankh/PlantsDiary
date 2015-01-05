@@ -480,7 +480,7 @@ var App = {
 							});
 						}
 	
-						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonSerach") {
+						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonSearch") {
 							$.ajax({
 								url : 'http://' + dirIP + '/PlantsDiary/www/query_plant.php',
 								type : 'POST',
@@ -491,7 +491,7 @@ var App = {
 								success : function(datos) {
 									$(".successMessage").slideDown('fast');
 									
-									$("#result").html(String(CreateGallery(datos)));
+									$("#result").html(CreateTableView(datos, "CSSTableGenerator", true));
 									$(window).resize();
 									setTimeout(function() {
 										$(".successMessage").slideUp('fast');
