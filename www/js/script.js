@@ -322,7 +322,7 @@ $(document).ready(function() {
 
 var windowLoaded = false;
 
-var dirIP = '192.168.1.35';
+var dirIP = '192.168.1.109';
 
 var App = {
 	init : function() {
