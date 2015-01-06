@@ -91,24 +91,7 @@
   
           
         
-      <div class="padpage padbottom">
-        <div class="footer">
-          <div class="social right">
-            <a href="http://plus.google.com" target="_blank"> <img src="img/icon-gplus.png" alt="Like us on Google+" /></a>
-            <a href="http://twitter.com" target="_blank"> <img src="img/icon-twitter.png" alt="Follow us on Twitter" /></a>
-            <a href="http://facebook.com" target="_blank"> <img src="img/icon-facebook.png" alt="Like us on Facebook" /></a>
-          </div>
-          
-          <div class="copyright left">
-           Plants Time
-          </div>
-          
-          <div class="clearfix"></div>
-        </div>
-        <!--end footer-->
-        
-      </div>
-      <!--end padbottom-->
+
       
       
       </div>
