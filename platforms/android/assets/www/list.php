@@ -34,6 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
+  
   <!-- end LESS -->
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css' />
@@ -45,6 +46,7 @@
        for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
   <script src="js/table.js"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-XXXXX-X']);
@@ -53,9 +55,11 @@
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-  </script>
+            var s = document.getElementsByTagName('script'
+				)[0];
+				s.parentNode.insertBefore(ga, s);
+				})();
+		</script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
@@ -64,9 +68,12 @@
 
   </header>
   <div role="main">
+
     
     <div id="careersPage" data-role="page" class="page innerPage">
       <div class="topGrahic"></div>
+      
+      
       <a href="index.html" class="menuButton">
         <img src="img/menu-button.png" alt="Menu" />
       </a>
@@ -76,12 +83,14 @@
 		<li>
 			<input type="submit" class="button buttonStrong right listarContenido" value="Listar" name="buttonList" value="submit" />
 		</li>
+		
 		</form>
-       	
-            
+		
+		
         <p>
           Listado de todas las muestras disponibles.
         </p>
+        <div id="map" style=" height: 1px;"></div>
         <div id="resultado">
 	
 		</div>
@@ -115,8 +124,10 @@
       </div>
     <!--end careers page-->
     
+    
   </div>
   
+ 
   <footer>
 
   </footer>

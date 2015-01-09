@@ -34,6 +34,7 @@
   <!-- LESS converted to css and minified via build script -->
   <link rel="stylesheet" href="less/style.css" />
   <script src="js/libs/less-1.1.4.js"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <!-- end LESS -->
   <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css' />
@@ -82,8 +83,16 @@
         <span class="h2">
           Indique nombre
         </span>
-         <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="NameCom" id="NameCom" />
-         <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit" />
+          <form action="query_plant.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
+        <input class="textbox" type="text" placeholder="Nombre com&uacute;n" required name="Search" id="Search" />
+		<input type="submit" class="button buttonStrong right listarContenido" value="Buscar" name="buttonSearch" >
+		</form>
+        <br>
+        <br>
+        <div id="map" style=" height: 1px;"></div>
+        <div id="result"></div>
+	    
+	</div>
       </div>
     
     

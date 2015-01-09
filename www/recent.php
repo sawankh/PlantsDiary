@@ -78,20 +78,20 @@
          <form action="mostrar_reciente.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
 		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonRecent" >
 		</form>
-      </div>
+      
       
       <br /><br />
-      <div class="padpage">
+   
         <h2> </h2>
         <span class="h2">
           Entradas recientes.
         </span>
         <div id="result"></div>
-      </div>
+     
   
-          
+       </div>   
         
-
+      <!--end padbottom-->
       
       
       </div>

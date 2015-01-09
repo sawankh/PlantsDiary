@@ -75,35 +75,22 @@
       	 <p>
           	Aqu&iacute; puede ver las entradas recientes a su diario.
         </p>
-      </div>
+         <form action="mostrar_reciente.php" id="enviar" method="POST" data-enhance="false" enctype="multipart/form-data">
+		<input type="submit" class="button buttonStrong right listarContenido" value="Ver" name="buttonRecent" >
+		</form>
+      
       
       <br /><br />
-      <div class="padpage">
+   
         <h2> </h2>
         <span class="h2">
           Entradas recientes.
         </span>
-      </div>
+        <div id="result"></div>
+     
   
-          
+       </div>   
         
-      <div class="padpage padbottom">
-        <div class="footer">
-          <div class="social right">
-            <a href="http://plus.google.com" target="_blank"> <img src="img/icon-gplus.png" alt="Like us on Google+" /></a>
-            <a href="http://twitter.com" target="_blank"> <img src="img/icon-twitter.png" alt="Follow us on Twitter" /></a>
-            <a href="http://facebook.com" target="_blank"> <img src="img/icon-facebook.png" alt="Like us on Facebook" /></a>
-          </div>
-          
-          <div class="copyright left">
-           Plants Time
-          </div>
-          
-          <div class="clearfix"></div>
-        </div>
-        <!--end footer-->
-        
-      </div>
       <!--end padbottom-->
       
       

@@ -1,62 +1,105 @@
+function f1(lat, lon) {
+	var map;
+    var elevator;
+    var latlng=new google.maps.LatLng(lat, lon);
+    var myOptions = {
+        zoom: 11,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map($('#map')[0], myOptions);
+
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        icon: 'http://google-maps-icons.googlecode.com/files/walking-tour.png',
+        draggable: true
+    });
+
+    $('#map').css( "height", "300px" );
+    window.scrollTo(0, 0);
+    refresh(lat,lon);
+}
+
+function refresh(lat, lon) {
+	var map;
+    var elevator;
+    var latlng=new google.maps.LatLng(lat, lon);
+    var myOptions = {
+        zoom: 11,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map($('#map')[0], myOptions);
+
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        icon: 'http://google-maps-icons.googlecode.com/files/walking-tour.png',
+        draggable: true
+    });
+}
+
+		
+
+
 // This function creates a standard table with column/rows
 // Parameter Information
 // objArray = Anytype of object array, like JSON results
 // theme (optional) = A css class to add to the table (e.g. <table class="<theme>">
 // enableHeader (optional) = Controls if you want to hide/show, default is show
 function CreateTableView(objArray, theme, enableHeader) {
-	// set optional theme parameter
-	if (theme === undefined) {
-		theme = 'mediumTable';
-		//default theme
-	}
-
-	if (enableHeader === undefined) {
-		enableHeader = true;
-		//default enable headers
-	}
-
-	// If the returned data is an object do nothing, else try to parse
-	var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
-
-	var str = '<table data-role="table" data-mode="columntoggle" class="' + theme + '">';
-
-	// table head
-	if (enableHeader) {
-		str += '<tbody><tr>';
-		for (var index in array[0]) {
-			str += '<td scope="col">' + index + '</td>';
-		}
-		str += '</tr>';
-	}
-
-	// table body
-	for (var i = 0; i < array.length; i++) {
-		str += (i % 2 == 0) ? '<tr class="alt">' : '<tr>';
-		for (var index in array[i]) {
-			str += '<td>' + array[i][index] + '</td>';
-		}
-		str += '</tr>';
-	}
-	str += '</tbody>'
-	str += '</table>';
-	return str;
-}
-
-function zoomIn()
-{
-    var Page = document.getElementById('Body');
-    var zoom = parseInt(Page.style.zoom) + 10 +'%'
-    Page.style.zoom = zoom;
-    return false;
-}
+    // set optional theme parameter
+    if (theme === undefined) {
+        theme = 'mediumTable'; //default theme
+    }
+    
  
-function zoomOut()
-{
-    var Page = document.getElementById('Body');
-    var zoom = parseInt(Page.style.zoom) - 10 +'%'
-    Page.style.zoom = zoom;
-    return false;
+    if (enableHeader === undefined) {
+        enableHeader = true; //default enable headers
+    }
+ 
+    // If the returned data is an object do nothing, else try to parse
+    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+
+    var str = '<table data-role="table" data-mode="columntoggle" class="' + theme + '">';
+    var atributos = ["Nombre científico: ", "Nombre común: ", "Longitud: ", "Latitud: ", "Fecha: ", "Observaciones: "]
+	 
+    // table body
+    var lon = 0;
+    for (var i = 0; i < array.length; i++) {
+        str += (i % 2 == 0) ? '<tr class="alt">' : '<tr>';
+		for (var index in array[i]) { 
+			if (index == "SPECIES")
+				str += '<table><tr><td scope="col"><b>' + atributos[0] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+			else if (index == "COMMON")
+				str += '<table><tr><td scope="col"><b>' + atributos[1] + '</b></td><td>' + array[i][index] + '</td></tr></table>';				
+			else if (index == "LONGITUDE") {
+				lon = array[i][index];
+				str += '<table><tr><td scope="col"><b>' + atributos[2] + '</b></td><td>' + array[i][index] + '</td>';
+			} else if (index == "LATITUDE") {
+				str += '<td scope="col"><b>' + "     " + atributos[3] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+				str += '<button onclick=\"f1(' + array[i][index] + ', ' + lon + ')\" class=\"button buttonStrong\" style=\" width: 150px;\">Ver mapa</button>';
+				//str += '<div role=\"main\" class=\"ui-content\" id=\"map-canvas\"> </div>';
+			} else if (index == "DATE")
+				str += '<table><tr><td scope="col"><b>' + atributos[4] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+			else if (index == "OBSERVATIONS")
+				str += '<table><tr><td scope="col"><b>' + atributos[5] + '</b></td><td>' + array[i][index] + '</td></tr></table>';
+			else if (index == "PICTURE") {
+				str += '<table><tr><td>' + 
+				'<img align=center src=\"data:image/gif;base64,' + array[i][index] +  '\"width="100" height="140" alt="embedded folder icon">'
+				+ '</td></tr></table>';
+				str += '<hr color = #87c619 align="left" noshade="noshade" size="2" width="100%" />';
+			}	
+		}		     		
+    }
+    str += '</tbody>';
+    str += '</table>';
+    return str;
 }
+
 
 // This function creates a details view table with column 1 as the header and column 2 as the details
 // Parameter Information
@@ -68,15 +111,14 @@ function CreateGallery(objArray) {
     // If the returned data is an object do nothing, else try to parse
     var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
 
-	var str = '<div class="iscroll" id="galleryScroller" data-ajax="false" style="overflow: hidden;"><div class="scroller"><ul class="menu"> ';
+	var str = '<div class="iscroll" id="galleryScroller" data-ajax="false""><div class="scroller"><ul class="menu"> ';
 	 
 	for (var i = 0; i < array.length; i++) {
 		str += (i % 3 == 0) ? '<li><ul class="section">' : ' ';
 		for (var index in array[i]) {
 			if (index == "PICTURE")
         	{
-				str += '<li class="square"><a class="box gallery-item" href=\"data:image/gif;base64,' + array[i][index] +  '\">';
-        		console.log(array[i][index]);
+				str += '<li class="square"><a class="box gallery-item ui-link photoswiped" href=\"data:image/gif;base64,' + array[i][index] +  '\">';
         		str += '<img src=\"data:image/gif;base64,' + array[i][index] +  '\"width="300" height="500" alt="embedded folder icon" />';
 				str += ' </a></li>';
         	}
@@ -226,7 +268,7 @@ $(document).ready(function() {
 									$('a.gallery-item', scrollContainer).addClass('photoswiped').photoSwipe();
 								}
 							}
-
+							
 						}, 50);
 					}
 				});
@@ -280,7 +322,7 @@ $(document).ready(function() {
 
 var windowLoaded = false;
 
-var dirIP = '192.168.1.109';
+var dirIP = '192.168.1.35';
 
 var App = {
 	init : function() {
@@ -460,6 +502,46 @@ var App = {
 									$(".successMessage").slideDown('fast');
 									
 									$("#result").html(String(CreateGallery(datos)));
+									$(window).resize();
+									setTimeout(function() {
+										$(".successMessage").slideUp('fast');
+									}, 4000);
+								}
+							});
+						}
+
+						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonRecent") {
+							$.ajax({
+								url : 'http://' + dirIP + '/PlantsDiary/www/mostrar_reciente.php',
+								type : 'POST',
+								data : $(formEl).serialize(),
+								beforeSend : function() {
+									$("#result").html('<img align="middle"  style="padding-left:150px;"  src="img/ajax-loader.gif">');
+								},
+								success : function(datos) {
+									$(".successMessage").slideDown('fast');
+									
+									$("#result").html(String(CreateGallery(datos)));
+									$(window).resize();
+									setTimeout(function() {
+										$(".successMessage").slideUp('fast');
+									}, 4000);
+								}
+							});
+						}
+	
+						if ($(this).find("input[type=submit]:focus").attr("name") == "buttonSearch") {
+							$.ajax({
+								url : 'http://' + dirIP + '/PlantsDiary/www/query_plant.php',
+								type : 'POST',
+								data : $(formEl).serialize(),
+								beforeSend : function() {
+									$("#result").html('<img align="middle"  style="padding-left:150px;"  src="img/ajax-loader.gif">');
+								},
+								success : function(datos) {
+									$(".successMessage").slideDown('fast');
+									
+									$("#result").html(CreateTableView(datos, "CSSTableGenerator", true));
 									$(window).resize();
 									setTimeout(function() {
 										$(".successMessage").slideUp('fast');

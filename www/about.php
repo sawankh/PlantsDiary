@@ -123,7 +123,7 @@
         	</ul>
        	
         </div>
-        <img src="img/sample-images/github.png" alt="Image3" />
+        <img src="img/sample-images/github.png" height="200" width="300" alt="Image3" />
         
       <div class="padpage padbottom">
         
